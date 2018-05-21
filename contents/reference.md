@@ -9,6 +9,8 @@
     * [Django ドキュメント](https://docs.djangoproject.com/ja/2.0/)
     * [DjangoCongressJP 2018](https://djangocongress.jp/)
 
+* 参考リンク
+    * [モダンDjango入門](https://codezine.jp/article/corner/723)
 * 書籍
     * [基礎から学ぶ Django](https://www.amazon.co.jp/dp/486354247X)
     * [現場で使える 基礎 Django【](https://booth.pm/ja/items/823251)
