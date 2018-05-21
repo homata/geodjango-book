@@ -13,7 +13,7 @@
     * [モダンDjango入門](https://codezine.jp/article/corner/723)
 * 書籍
     * [基礎から学ぶ Django](https://www.amazon.co.jp/dp/486354247X)
-    * [現場で使える 基礎 Django【](https://booth.pm/ja/items/823251)
+    * [現場で使える 基礎 Django](https://booth.pm/ja/items/823251)
 
 ### DjangoGrilsDocs
 
