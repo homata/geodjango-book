@@ -6,7 +6,7 @@
 * Python3.5以上
 * PostgreSQL 9.5以上
     - PostGIS 2.x
-* GISライブラリ    
+* OSGeo4W (GISライブラリ)
     - GDAL(Geospatial Data Abstraction Library) 
     - GEOS (Geometry Engine, Open Source) 
     - PROJ4 (Cartographic Projections Library) 
@@ -78,7 +78,7 @@ Pythonのインストール
 
 Python 3.6 をインストールします。
 
-### Windows
+### **<u>Windows</u>**
 
 Windowsのシステム情報でシステムの種類が32-bitバージョンか64-bitバージョンかを確認してください。  
 (例）コントロールパネル>システムとセキュリティ>システムを開く
@@ -93,7 +93,7 @@ Python for Windowsを <https://www.python.org/downloads/windows/>　からダウ
         Latest Python 3 Release - Python 3.6.5
         Latest Python 2 Release - Python 2.7.15
 
-<div align="center" style="margin-bottom:50px">
+<div align="center" style="margin-bottom:50px;margin-top:30px"">
     <img src="images/windows/001.png" width=60% style="border:1px #000 solid;">
 </div>
 
@@ -103,35 +103,35 @@ Python for Windowsを <https://www.python.org/downloads/windows/>　からダウ
 * 32ビット版のWindowsの場合 
     - "Windows x86 executable installer" (x86実行可能インストーラー)をダウンロードしてください
 
-<div align="center" style="margin-bottom:50px">
+<div align="center" style="margin-bottom:50px;margin-top:30px"">
     <img src="images/windows/002.png" width=60% style="border:1px #000 solid;">
 </div>
 
 インストーラをダブルクリックして実行します。ダイアログが表示されるので、
 「Add Python 3.x to Path」を忘れずに必ずチェックしてから「Install Now」をクリックします。
 
-<div align="center" style="margin-bottom:50px">
+<div align="center" style="margin-bottom:50px;margin-top:30px"">
     <img src="images/windows/003.png" width=60% style="border:1px #000 solid;">
 </div>
 
 インストーラーが実行されるので、終了まで待ちます。
-<div align="center" style="margin-bottom:50px">
+<div align="center" style="margin-bottom:50px;margin-top:30px"">
     <img src="images/windows/004.png" width=60% style="border:1px #000 solid;">
 </div>
 
 インストーラーが終了するとダイアログが表示されるので「Close」ボタンをクリックして終了します。
-<div align="center" style="margin-bottom:50px">
+<div align="center" style="margin-bottom:50px;margin-top:30px"">
     <img src="images/windows/005.png" width=60% style="border:1px #000 solid;">
 </div>
 
 コマンドプロンプトを実行します。  
 例）スタートメニュー→すべてのプログラム→アクセサリ→コマンドプロンプト
-<div align="center" style="margin-bottom:50px">
+<div align="center" style="margin-bottom:50px;margin-top:30px"">
     <img src="images/windows/006.png" width=60% style="border:1px #000 solid;">
 </div>
 
 コマンドプロンプトが実行されます。
-<div align="center" style="margin-bottom:50px">
+<div align="center" style="margin-bottom:50px;margin-top:30px"">
     <img src="images/windows/007.png" width=60% style="border:1px #000 solid;">
 </div>
 
@@ -139,7 +139,7 @@ Python for Windowsを <https://www.python.org/downloads/windows/>　からダウ
 
     例）python -V
 
-<div align="center" style="margin-bottom:50px">
+<div align="center" style="margin-bottom:50px;margin-top:30px"">
     <img src="images/windows/008.png" width=60% style="border:1px #000 solid;">
 </div>
 
@@ -153,7 +153,8 @@ pipのバージョンも確認します
     pip 9.0.3 from xxx (python 3.6)
 
 
-### Mac（OSX）
+### **<u>Mac(OSX)</u>**
+
 
 Python for Macを <https://www.python.org/downloads/mac-osx/>　からダウンロードしてください。最新版の「Latest Python 3 Release - Python 3.6.5」(2018年6月4日現在)をダウンロードしてください。
 
@@ -187,24 +188,255 @@ pipのバージョンも確認します
 PostgreSQLのインストール
 ----
 
-### Windows
-### Mac（OSX）
+### **<u>Windows</u>**
+ 
+ * [GeoDjango Installation - Install Windows](https://docs.djangoproject.com/en/2.0/ref/contrib/gis/install/#windows)
 
-----
 
-PostGISのインストール
------
+Enterprise DBのWebサイトから PostgreSQL 9.x　のインストーラー <https://www.enterprisedb.com/downloads/postgres-postgresql-downloads>
+をダウンロードします。
 
-### Windows
-### Mac（OSX）
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/100.png" width=60% style="border:1px #000 solid;">
+</div>
 
-----
+インストーラを実行し画面の指示に従いデフォルトのオプションでインストールしてください。
 
-GISライブラリ
------
-- GDAL(Geospatial Data Abstraction Library) 
-- GEOS (Geometry Engine, Open Source) 
-- PROJ4 (Cartographic Projections Library) 
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/101.png" width=60% style="border:1px #000 solid;">
+</div>
 
-### Windows
-### Mac
+
+PostgreSQLインストーラはpostgresデータベースのスーパーユーザーを作成します。
+アカウントのパスワードを一度設定するように求められます。覚えておいてください！
+
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/103.png" width=60% style="border:1px #000 solid;">
+</div>
+
+ポート番号はデフォルトの5432を設定します。
+
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/104.png" width=60% style="border:1px #000 solid;">
+</div>
+
+localeは「Japan」を選択します。
+
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/105.png" width=60% style="border:1px #000 solid;">
+</div>
+
+準備よければこれでインストールを開始します。
+
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/106.png" width=60% style="border:1px #000 solid;">
+</div>
+
+インストールが開始されるので、インストーラが完了するまで待ちます。
+
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/107a.png" width=60% style="border:1px #000 solid;">
+</div>
+
+インストーラが完了すると、終了時にApplication Stack Builder（ASB）を起動するように要求されます。<br> PostGISをインストールする必要があるため、このチェックボックスをオンにします。
+
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/108.png" width=60% style="border:1px #000 solid;">
+</div>
+
+スタックビルダ(ASB)が起動されるので、インストールされたPostgreSQLを選択します
+
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/109a.png" width=60% style="border:1px #000 solid;">
+</div>
+
+Spatial ExtensionsからPostGIS 2.4を選択します
+
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/110.png" width=60% style="border:1px #000 solid;">
+</div>
+
+下記の拡張の一緒にインストールされます。
+
+    PostGIS 2.3.7 bundle includes PostGIS 2.3.7 w GDAL 2.2.4, GEOS 3.6.2,
+    Proj4.9.3, pgRouting 2.6.0, ogr_fdw 1.0.5  spatial foreign data wrapper
+    extension, and pgPointcloud 1.1.0dev.
+    http://postgis.net/2018/04/06/postgis-patches/
+
+    PostGIS "spatially enables" the PostgreSQL server, allowing it to be used 
+    as a backend spatial database for geographic information systems (GIS).
+    PostGIS follows the OpenGIS "Simple Features Specification for SQL" and 
+    has been certified as compliant with the "Types and Functions" profile. 
+
+    https://github.com/pgRouting/pgrouting/releases/tag/v2.6.0
+    pgRouting extensions PostGIS for building routing applications
+
+    https://github.com/pramsey/pgsql-ogr-fdw
+    ogr_fdw allows you to query flat files, relational databases, and web
+    services to name a few.  Spatial columns get transformed to PostGIS 
+    geometry columns.
+
+    https://github.com/pgpointcloud/pointcloud
+    pgPointcloud introduces specialty types for storing point cloud data 
+    loaded from LIDAR.
+
+
+ダウンロードディレクトリを選択します
+
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/111.png" width=60% style="border:1px #000 solid;">
+</div>
+
+ダウンロードされたら「次へ」ボタンを選択します。
+
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/112.png" width=60% style="border:1px #000 solid;">
+</div>
+
+
+ライセンスを読んだら「I Agree」ボタンを選択します。
+
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/113.png" width=60% style="border:1px #000 solid;">
+</div>
+
+PostGISがチェックされていることを確認し「Next」ボタンを選択します。
+
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/114.png" width=60% style="border:1px #000 solid;">
+</div>
+
+インストールディレクトリを確認し「Next」ボタンを選択します。
+
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/115.png" width=60% style="border:1px #000 solid;">
+</div>
+
+インストールが開始されます。
+
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/116.png" width=60% style="border:1px #000 solid;">
+</div>
+
+環境設定の画面で「はい」を選択します。
+
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/117.png" width=60% style="border:1px #000 solid;">
+</div>
+
+デフォルトの設定はそのままで「はい」を選択します。
+
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/118.png" width=60% style="border:1px #000 solid;">
+</div>
+
+デフォルトの設定はそのままで「はい」を選択します。
+
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/119.png" width=60% style="border:1px #000 solid;">
+</div>
+
+インストールが終了したら「Close」を選択します。
+
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/120.png" width=60% style="border:1px #000 solid;">
+</div>
+
+スタックビルだを終了します
+
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/121.png" width=60% style="border:1px #000 solid;">
+</div>
+
+正常にインストールされた場合、メニューの「PostGIS」のグループが作成されます
+
+Windows10の場合
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/122.png" width=60% style="border:1px #000 solid;">
+</div>
+
+
+正常にインストールされた場合、PostgreSQLサーバは、システムがWindowsサービスとして起動するたびにバックグラウンドで実行されます。 
+
+##### PostgreSQL/PostGIS環境変数、パスの設定
+
+「ユーザー環境変数」に設定をします。
+
+[Windowsシステム・ツール] →［コントロールパネル］→［システムとセキュリティ］→［システム］と進み、画面左にある［システムの詳細設定］をクリックする。
+
+Windows10の場合
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/130.png" width=60% style="border:1px #000 solid;">
+</div>
+
+ウィンドウの［環境変数］ボタンをクリック。
+
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/131.png" width=60% style="border:1px #000 solid;">
+</div>
+
+「C:\Program Files\PostgreSQL\9.6\bin」(PostgreSQLをインストールしたディレクトリ)をPATH変数に追加します。
+
+**「ユーザー環境変数」の一覧に「Path」がある場合**<br>
+「Path」を選択した後［編集］ボタンをクリックして「C:\Program Files\PostgreSQL\9.6\bin」を追加します
+
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/132.png" width=60% style="border:1px #000 solid;">
+</div>
+
+**「ユーザー環境変数」の一覧に「Path」がない場合**<br>
+[新規］ボタンをクリックし、変数名に「Path」、変数値に「C:\Program Files\PostgreSQL\9.6\bin」を入力します。
+
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/133.png" width=60% style="border:1px #000 solid;">
+</div>
+
+Windowsメニューから「コマンドプロンプト」を起動して、Pathの設定が有効か確認します。
+
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/134.png" width=60% style="border:1px #000 solid;">
+</div>
+
+「コマンドプロンプト」で「psql -U postgres -l」と入力してインストールの時に設定した管理パスワードを入力してデータベース一覧を表示してみます
+
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/135.png" width=60% style="border:1px #000 solid;">
+</div>
+
+「コマンドプロンプト」で「ogr2ogr --version」と入力して、GDALのツールがインストールされているかを確認します。
+
+
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/windows/136.png" width=60% style="border:1px #000 solid;">
+</div>
+
+
+### **<u>Mac(OSX)</u>**
+
+* [GeoDjango Installation - Install Mac](https://docs.djangoproject.com/en/2.0/ref/contrib/gis/install/#macos)
+
+#### PostGIS/PostGIS/OSGeo4W (GISライブラリ)のインストール
+
+Homebrew (パッケージ管理システム) を使用してインストールをします。
+Homebrewをインストールしてない場合は、「Homebrew公式サイト」(https://brew.sh/index_ja)を参考にしてHomebrewをインストールしてください。
+
+参考: [MacにHomebrewを導入する方法](https://qiita.com/balius_1064/items/ac7dff5ef10eaf69996f)
+
+    インストール方法
+    1. AppStoreでXcodeのインストール
+    2. コマンドライン・デベロッパ・ツールのインストール
+        $ xcode-select --install
+    3. Homebrewのインストール
+        $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    4.確認
+        $ brew doctor
+        Your system is ready to brew.
+    となっていれば導入成功です。
+
+下記のbrewコマンドを入力してPostGIS/PostGIS/OSGeo4W (GISライブラリ)のインストール
+をします。
+
+    $ brew install postgresql
+    $ brew install postgis
+    $ brew install gdal
+

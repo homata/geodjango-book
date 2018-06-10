@@ -6,6 +6,9 @@ Summary
     * [対象読者](README.md#対象読者)
     * [免責](README.md#免責)
 
+## インストール
+* [インストール](INSTALL/INSTALL.md)
+
 ## はじめての地理空間情報
 * [1. 地理空間情報とは](geo/README.md.md)
 
