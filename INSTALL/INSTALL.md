@@ -10,71 +10,8 @@
     - GDAL(Geospatial Data Abstraction Library) 
     - GEOS (Geometry Engine, Open Source) 
     - PROJ4 (Cartographic Projections Library) 
-
-Django入門で、Django Girls Tutorialというものがあります。
-[Django Girls](https://djangogirls.org/)というコミュニティが作成したチュートリアルですが、ここのインストールの説明がとてもわかり易く解説しているのでこれを参考にしています。
-
----
-
-### 参考URL
-
-#### Django Girls Tutorial
-* [Django Girls Tutorial 英語版](https://tutorial.djangogirls.org/en/)
-* [Django Girls Tutorial 日本語版](https://djangogirlsjapan.gitbooks.io/workshop_tutorialjp/content/)
-
-#### Python
-プログラミング言語の一つ。コードの可読性を高めた言語です。
-
-* [Python 公式サイト](https://www.python.org/)
-
-#### Django
-Pythonで作成されたWebアプリケーションを作成するフレームワークです。
-GeoDjangoはDjangoに含まれている地理空間データ用のモジュールです。
-
-* [Django 公式サイト](https://www.djangoproject.com/)
-* [Django 日本語公式サイト](http://djangoproject.jp/)
-
-#### PostgreSQL
-オープンソースのリレーショナルデータベースです。
-
-* [PostgreSQL](https://www.postgresql.org/)
-* [日本PostgreSQLユーザ会](https://www.postgresql.jp/)
-
-##### PostGIS
-PostGISは PostgreSQLデータベースに地理空間情報を扱うための機能拡張をする拡張ライブラリです。
-
-* [PostGIS(OSGeo)](http://www.postgis.net/)
-    - [PostGIS](http://postgis.refractions.net/)
-
-##### GDAL(Geospatial Data Abstraction Library) 
-OSGeo財団が提供しているGISラスターデータフォーマット用ライブラリ。
-ラスタおよびベクトル地理空間データ変換ライブラリ
-
-* [GDAL(Geospatial Data Abstraction Library)](http://www.gdal.org)
-
-
-#### GEOS (Geometry Engine, Open Source) 
-地理空間情報処理のためのオープンソースライブラリで、OSGeo財団が支援している。
-幾何演算ライブラリ
-
-* [Geometry Engine, Open Source](http://trac.osgeo.org/geos/)
-
-#### PROJ4 (Cartographic Projections Library) 
-一般的な座標変換ソフトウェア。
-投影変換ライブラリ
-
-* [PROJ4 (Cartographic Projections Library)](http://proj4.org/)
-
-### OSGeo財団
-OSGeo財団（The Open Source Geospatial Foundation）は、オープンソース地理空間ソフトウェアの支援と構築のために設立されたコミュニティーです。
-
-* [OSGeo財団](https://www.osgeo.org/)
-* [OSGeo財団日本支部（OSGeo.JP）](https://www.osgeo.jp/)
-
----
  
-Pythonのインストール
------
+# Pythonのインストール
 
 Python 3.6 をインストールします。
 
@@ -183,10 +120,8 @@ pipのバージョンも確認します
     $ pip --version
     pip 9.0.3 from xxx (python 3.6)
 
-----
 
-PostgreSQLのインストール
-----
+# PostgreSQLのインストール
 
 ### **<u>Windows</u>**
  
