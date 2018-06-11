@@ -11,9 +11,16 @@
     - GEOS (Geometry Engine, Open Source) 
     - PROJ4 (Cartographic Projections Library) 
  
+
+
 # Pythonのインストール
 
 Python 3.6 をインストールします。
+
+Pythonのインストールは下記も参考にすると良いでしょう。
+
+* python.jpの環境構築ガイド - https://www.python.jp/install/install.html
+* Python Boot Campのテキスト - http://pycamp.pycon.jp/textbook/1_install.html
 
 ### **<u>Windows</u>**
 

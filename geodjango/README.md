@@ -11,7 +11,7 @@ GeoDjangoはDjangoに含まれている地理空間データ用のモジュー�
 * 地理空間情報APIを追加 (GeolocationAPI ...)
 * Manageコマンド (GeoDjango Management Commands)
 
-<u>**Django Webアプリの基本的な構成例**</u>
+<u>**GeoDjango Webアプリの基本的な構成例**</u>
 
 <div align="center" style="margin-bottom:50px;margin-top:30px">
     <img src="images/000.png" width=60% style="border:1px #000 solid;">

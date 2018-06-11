@@ -13,8 +13,10 @@ Pythonで作成されたWebアプリケーションを作成するフレーム�
 
 ### 参考リンク
 * モダンDjango入門 - https://codezine.jp/article/corner/723
+* Qiita Django - https://qiita.com/tags/django
 * PaizaCloud - https://paiza.cloud/ja/
 * 「現場で使える 基礎Django」を読みました #技術書典 - http://thinkami.hatenablog.com/entry/2018/04/25/081142
+* 侍エンジニア塾が運営するプログラミング入門者向け学習情報サイト - https://www.sejuku.net/blog/category/django
 
 ###  書籍
 * 基礎から学ぶ Django - https://www.amazon.co.jp/dp/486354247X
