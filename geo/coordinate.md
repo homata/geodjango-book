@@ -160,7 +160,7 @@ EPSG:4326は、米軍が策定した測地系でGPS等に使われている。GP
 </div>
 
 <div style="font-size:xx-small">
-* http://d.hatena.ne.jp/tmizu23/20091215/1260868350
+* http://d.hatena.ne.jp/tmizu23/20091215/1260868350 <br>
 * http://www.gsi.go.jp/chubu/minichishiki10.html
 </div>
 
@@ -195,6 +195,6 @@ EPSG:4326は、米軍が策定した測地系でGPS等に使われている。GP
 </div>
 
 <div style="font-size:xx-small">
-* http://www.gsi.go.jp/sokuchikijun/jpc.html
+* http://www.gsi.go.jp/sokuchikijun/jpc.html <br>
 * http://d.hatena.ne.jp/tmizu23/20091215/1260868350
 </div>

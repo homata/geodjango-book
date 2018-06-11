@@ -16,6 +16,10 @@ Summary
 ## はじめての地理空間情報
 * [地理空間情報とは](geo/README.md)
 * [測地系と座標系](geo/coordinate.md)
+* [空間データとファイル](geo/data_file.md)
+* [Geoデータベース](geo/database.md)
+* [Geoライブラリ](geo/library.md)
+* [背景地図 (ベースマップ)](geo/basemap.md)
 
 ## Django
 * [1. Djangoの概要](django/README.md)
