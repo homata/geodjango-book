@@ -6,7 +6,6 @@ Summary
     * [対象読者](README.md#対象読者)
     * [ライセンス](README.md#ライセンス)
     * [免責](README.md#免責)
-    * [参考URL](README.md#参考URL)
 
 ## 前準備
 * [インストール](INSTALL/INSTALL.md)
