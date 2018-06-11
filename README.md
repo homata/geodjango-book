@@ -20,7 +20,8 @@ WebGISアプリ開発入門として、PythonのWebフレームワークであ�
 * リーガルコード - https://creativecommons.org/licenses/by-sa/4.0/legalcode.ja
 
 ## 参考にしたサイト
-この資料は下記のサイトを参考に作成をしています。
+この資料は下記のサイトを参考に作成をしています。<br>
+資料の一部に参考、引用、転載をしています。
 
 * [Django documentation](https://docs.djangoproject.com/en/2.0/)
 * [Django ドキュメント](https://docs.djangoproject.com/ja/2.0/)
