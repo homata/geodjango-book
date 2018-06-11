@@ -15,7 +15,8 @@
     - <http://proj4.org/>
 
 <div style="font-size:xx-small">
-* OSGeo財団（The Open Source Geospatial Foundation）https://www.osgeo.jp/地理技術及び地理データの共有化を推進する非営利の非政府
+* OSGeo財団 (The Open Source Geospatial Foundation) <br>
+* https://www.osgeo.jp/地理技術及び地理データの共有化を推進する非営利の非政府
 </div>
 
 ## 代表的な地図表示のJavaScriptライブラリ
@@ -32,7 +33,8 @@
         - 新規機能はこちらに
         - OpenLayers2より多少複雑である
 
-### Leaflet.js <https://leafletjs.com/>
+### Leaflet.js
+* <https://leafletjs.com/>
 * GISの知識のない開発者でも容易にタイルベースのWeb地図を表示できる
 * Web開発の経験があると理解しやすいくシンプルに使える
 * プラグインが充実している

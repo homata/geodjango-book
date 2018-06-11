@@ -1,2 +1,2 @@
-# 1. Djangoの概要
+# Djangoの概要
 

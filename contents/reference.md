@@ -81,3 +81,13 @@ OSGeo財団（The Open Source Geospatial Foundation）は、オープンソー�
 
 * [OSGeo財団](https://www.osgeo.org/)
 * [OSGeo財団日本支部（OSGeo.JP）](https://www.osgeo.jp/)
+
+## GISアプリとGIS関連データ
+
+* GISアプリケーション
+    - [デスクトップGIS QGIS](http://www.qgis.org)
+    - [OSGeo-Live 11.0 コンテンツ](https://live.osgeo.org/ja/overview/overview.html)
+* GIS関連データ
+    - [国土数値情報　ダウンロードサービス](http://nlftp.mlit.go.jp/ksj/index.html)
+    - [G空間情報センター](https://www.geospatial.jp/)
+    - [地図で見る統計(統計GIS)](https://www.e-stat.go.jp/gis)

@@ -22,15 +22,15 @@ Summary
 * [背景地図 (ベースマップ)](geo/basemap.md)
 
 ## Django
-* [1. Djangoの概要](django/README.md)
-* [2. Djangoのインストール](django/install)
-* [3. Djangonのチュートリアル](django/tutorial)
+* [Djangoの概要](django/README.md)
+* [Djangoのインストール](django/install)
+* [Djangonのチュートリアル](django/tutorial)
 
 ## GeoDjango
-* [1. GeoDjangoの概要](geodjango/README.md)
-* [2. GeoDjangoのインストール](geodjango/install.md)
-* [3. GeoDjangoのチュートリアル](geodjango/tutorial.md)
-* [4. GeoDjangoで出来ること (データの配信方法など)](geodjango/tips.md)
+* [GeoDjangoの概要](geodjango/README.md)
+* [GeoDjangoのインストール](geodjango/install.md)
+* [GeoDjangoのチュートリアル](geodjango/tutorial.md)
+* [GeoDjangoで出来ること (データの配信方法など)](geodjango/tips.md)
 
 ## さいごに
 * [参考サイト](contents/reference.md)
