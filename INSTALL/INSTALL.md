@@ -135,8 +135,7 @@ pipのバージョンも確認します
  * [GeoDjango Installation - Install Windows](https://docs.djangoproject.com/en/2.0/ref/contrib/gis/install/#windows)
 
 
-Enterprise DBのWebサイトから PostgreSQL 9.x　のインストーラー <https://www.enterprisedb.com/downloads/postgres-postgresql-downloads>
-をダウンロードします。
+Enterprise DBのWebサイトから PostgreSQL 9.x　のインストーラー <https://www.enterprisedb.com/downloads/postgres-postgresql-downloads>をダウンロードします。
 
 <div align="center" style="margin-bottom:50px;margin-top:30px">
     <img src="images/windows/100.png" width=60% style="border:1px #000 solid;">
@@ -284,7 +283,7 @@ PostGISがチェックされていることを確認し「Next」ボタンを選
     <img src="images/windows/120.png" width=60% style="border:1px #000 solid;">
 </div>
 
-スタックビルだを終了します
+スタックビルダを終了します
 
 <div align="center" style="margin-bottom:50px;margin-top:30px">
     <img src="images/windows/121.png" width=60% style="border:1px #000 solid;">
@@ -360,9 +359,9 @@ Windowsメニューから「コマンドプロンプト」を起動して、Pa
 #### PostGIS/PostGIS/OSGeo4W (GISライブラリ)のインストール
 
 Homebrew (パッケージ管理システム) を使用してインストールをします。
-Homebrewをインストールしてない場合は、「Homebrew公式サイト」(https://brew.sh/index_ja)を参考にしてHomebrewをインストールしてください。
+Homebrewをインストールしてない場合は、Homebrew公式サイト <https://brew.sh/index_ja> を参考にしてHomebrewをインストールしてください。
 
-参考: [MacにHomebrewを導入する方法](https://qiita.com/balius_1064/items/ac7dff5ef10eaf69996f)
+参考: MacにHomebrewを導入する方法 - https://qiita.com/balius_1064/items/ac7dff5ef10eaf69996f
 
     インストール方法
     1. AppStoreでXcodeのインストール
