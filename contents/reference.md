@@ -36,11 +36,12 @@ GeoDjangoはDjangoに含まれている地理空間データ用のモジュー�
 * GeoDjango - https://docs.djangoproject.com/en/2.0/ref/contrib/gis/
     * GeoDjango | Django documentation | Django - https://docs.djangoproject.com/en/2.0/ref/contrib/gis/
     * GeoDjango Tutorial - https://docs.djangoproject.com/en/2.0/ref/contrib/gis/tutorial/
+* Geographic add-ons for Django REST Framework - https://github.com/djangonauts/django-rest-framework-gis
 
 ### 参考リンク
 * GeoDjangoではじめる地理空間情報 - https://speakerdeck.com/homata/geodjangodehazimerudi-li-kong-jian-qing-bao
 * PostGISとGeoDjangoを使ってLeafletでGeoJSON Tile Layerを表示してみる(1) – インストール編 – - https://blog.bitmeister.jp/?p=3467
-
+* Django Rest Framework GISで誰でも簡単RESTful Geo API - http://monomoti.hatenablog.jp/entry/2015/12/15/000000
 
 
 ## Python

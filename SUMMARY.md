@@ -22,8 +22,8 @@ Summary
 
 ## Django
 * [Djangoの概要](django/README.md)
-* [Djangoのインストール](django/install)
-* [Djangonのチュートリアル](django/tutorial)
+* [Djangoのインストール](django/install.md)
+* [Djangonのチュートリアル](django/tutorial.md)
 
 ## GeoDjango
 * [GeoDjangoの概要](geodjango/README.md)
