@@ -84,6 +84,7 @@ OSGeo財団（The Open Source Geospatial Foundation）は、オープンソー�
 
 * OSGeo財団 - https://www.osgeo.org/
 * OSGeo財団日本支部（OSGeo.JP） - https://www.osgeo.jp/
+* OSGeo4W - https://trac.osgeo.org/osgeo4w/wiki/OSGeo4W_jp
 
 ## GISアプリとGIS関連データ
 

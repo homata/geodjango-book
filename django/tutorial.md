@@ -24,9 +24,11 @@ Djangoでは、アプリケーションごとに開発を進めていきます�
 
 ## プロジェクト構成
 
-プロジェクトの作成は下記のコマンドで作成をします。これがDjangoアプリの元になります。
+プロジェクトの作成は下記のコマンドで作成をします。
+これがWebアプリのルートとなります。
 
-(env) $ django-admin startproject <プロジェクト名>
+プロジェクト作成コマンド<br>
+$ django-admin startproject <プロジェクト名>
 
     MacOSの場合
     (env) $ django-admin startproject geodjango
@@ -39,12 +41,12 @@ Djangoでは、アプリケーションごとに開発を進めていきます�
 Django標準のファイル構成
 
     geodjango              <-- プロジェクトのルート
-        ├── manage.py      <-- プロジェクトの管理用のスクリプト
-        └── geodjango      <-- プロジェクト設定
-            ├── __init__.py   <-- Pythonの初期化処理パッケージファイル
-            ├── settings.py   <-- プロジェクトの設定ファイル
-            ├── urls.py       <-- プロジェクトのURLパターン設定ファイル
-            └── wsgi.py       <-- プロジェクトのWSGIインターフェース設定ファイル
+    ├── manage.py      <-- プロジェクトの管理用のスクリプト
+    └── geodjango      <-- プロジェクト設定
+        ├── __init__.py   <-- Pythonの初期化処理パッケージファイル
+        ├── settings.py   <-- プロジェクトの設定ファイル
+        ├── urls.py       <-- プロジェクトのURLパターン設定ファイル
+        └── wsgi.py       <-- プロジェクトのWSGI(ウィズギー)インターフェース設定ファイル
 
 ## 設定変更
 
