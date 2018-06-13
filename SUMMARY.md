@@ -28,6 +28,7 @@ Summary
 ## GeoDjango
 * [GeoDjangoの概要](geodjango/README.md)
 * [GeoDjangoのインストール](geodjango/install.md)
+* [PostGISへデータインポート](geodjango/import.md)
 * [GeoDjangoのチュートリアル](geodjango/tutorial.md)
 * [GeoDjangoで出来ること (データの配信方法など)](geodjango/tips.md)
 
