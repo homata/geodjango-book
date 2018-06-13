@@ -547,6 +547,54 @@ OpenStreetMapでマップが表示されているのを確認します
     <img src="images/302.png" width=60% style="border:1px #000 solid;">
 </div>
 
+## django-leafletで管理画面のマップを表示
+
+管理画面のマップをdjango-leafletで表示をします。
+
+django-leafletをインストール
+```python
+(env) $ pip install django-leaflet
+```
+
+設定ファイルに追加
+```python
+(env) $ vi geodjango/settings.py
+INSTALLED_APPS = [
+    :
+    'leaflet',
+]
+```
+
+管理画面設定ファイルを変更
+```python
+(env) $ vi world/admin.py
+変更前
+admin.site.register(Border, admin.OSMGeoAdmin)
+admin.site.register(School, admin.OSMGeoAdmin)
+admin.site.register(Facility, admin.OSMGeoAdmin)
+admin.site.register(Busstop, admin.OSMGeoAdmin)
+  ↓
+変更後
+from leaflet.admin import LeafletGeoAdmin
+
+class BorderAdmin(LeafletGeoAdmin):
+  search_fields = ['n03_001','n03_003','n03_004']
+  list_filter = ('n03_003')
+
+admin.site.register(Border, BorderAdmin)
+admin.site.register(School, LeafletGeoAdmin)
+admin.site.register(Facility, LeafletGeoAdmin)
+admin.site.register(Busstop, LeafletGeoAdmin)
+```
+LeafletGeoAdminを登録します。<br>
+
+LeafletGeoAdminを継承したBorderAdminクラスを定義しこれを登録することで、検索・フィルタ機能の追加することが出来ます。
+* search_fields: 検索対象
+* list_filter: フィールド名がフィルタ対象
+
+<u>**Note**</u>
+* django-leafletは管理画面以外にもいろいろな機能がありますので下記を参考にしてみて下さい。
+* django-leaflet - https://github.com/makinacorpus/django-leaflet
 
 ## 管理画面をタイトルを変更
 
