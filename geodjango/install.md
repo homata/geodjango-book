@@ -207,6 +207,7 @@ $ vi geodjango/settings.py
 PostGISのデータベースにテーブルを作成します。
 
     (env) $ python manage.py migrate
+    
     Operations to perform:
         Apply all migrations: admin, auth, contenttypes, sessions
     Running migrations:
