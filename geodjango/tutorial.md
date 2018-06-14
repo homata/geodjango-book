@@ -29,7 +29,17 @@ pipコマンドを使って追加をします。
 * django-filter - https://django-filter.readthedocs.io/en/latest/index.html
 * markdown - https://python-markdown.github.io/
 
-#### settings.py設定
+編集対象ファイル
+```
+├── geodjango
+│   ├── settings.py       <-- 設定
+│   └── urls.py           <-- REST APIのURL設定
+└── world
+    ├── serializers.py　　 <-- REST APIで使うシリアライザー
+    └── views.py          <-- REST APIのビュー
+```
+
+#### geodjango/settings.py設定
 インストールしたアプリケーションを設定ファイルのsettings.pyに追加します
 ```python
 (env) $ vi geodjango/settings.py
@@ -42,7 +52,7 @@ INSTALLED_APPS = [
 ]
 ```
 
-#### serializers.py作成
+#### world/serializers.py作成
 シリアライザはデータベースとAPIのとの間でデータフォーマットの変換をします。
 worldアプリにserializers.pyファイルを作成します。
 ```python
@@ -76,7 +86,7 @@ class BusstopSerializer(serializers.ModelSerializer):
                    "p11_004_17", "p11_004_18", "p11_004_19")
 ```
 
-#### view.py作成
+#### world/view.py作成
 ビューでリクエストに対するレスポンスの設定をします。
 ```python
 (env) $ vi world/view.py
@@ -141,7 +151,7 @@ class BusstopViewSet(viewsets.ModelViewSet):
 * TMSTileFilter
 * DistanceToPointFilter
 
-#### urls.py設定
+#### geodjango/urls.py設定
 URLを設定します
 ```python
 (env) $ vi geodjango/urls.py
@@ -400,3 +410,4 @@ def index(request):
     return render(request,'world/index.html',contexts)
 ```
 
+## ログイン画面
