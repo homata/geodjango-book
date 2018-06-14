@@ -224,10 +224,147 @@ Webサーバを立ち上げて、http://localhost:8000/api/ にアクセスし�
 
 ### GeoJSON Serializer
 
-GeoJSON Serializerを使って、GeoJSONをマップに表示します。
+GeoJSON Serializerを使ってLeafletでGeoJSONをマップに表示します。
 
-#### view.py編集
-GeoJSONを返すビューを作成します。
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/500.png" width=80% style="border:1px #000 solid;">
+</div>
+
+編集対象ファイル
+```
+├── geodjango
+│   └── urls.py              <-- マップページとREST APIのURL設定
+└── world
+    ├── static
+    │   └── world
+    │       ├── css
+    │       │   └── app.css  <-- マップページのCSS
+    │       └── js
+    │           └── app.js   <-- マップページのJavaScript
+    ├── templates
+    │   └── world
+    │       └── index.html   <-- マップページのテンプレートHTMLファイル
+    └── views.py             <-- マップページとREST APIのビュー
+```
+<u>**Note**</u>
+staticとtemplatesは、フレームワークで決められた静的データとテンプレートの置き場所で(geodjango/settings.pyで変更可能)、アプリケーション名の下にそれぞれのファイルを配置します。
+
+#### geodjango/urls.py設定
+2つのURLを設定します。
+* ルート”/”でマップ表示するURL
+* REST APIでGeoJSONをgetするURL
+
+URLを設定します
+```python
+(env) $ vi geodjango/urls.py
+from world.views import index, GeojsonAPIView
+from django.views.generic.base import RedirectView
+
+urlpatterns = [
+    :
+    path('', index, name='world_index'),
+    path('world/geojson/', GeojsonAPIView.as_view(), name='geojson_view'),
+]
+```
+
+#### static/world/css/app.css編集
+マップページのCSSを記述します。
+```css
+(env) $ vi static/world/css/app.css
+html, body  {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+#map {
+    width: 100%;
+    height: 100%;
+}
+```
+
+#### static/world/js/app.js編集
+マップページのJavaSvriptを記述します。
+```javascript
+(env) $ vi static/world/js/app.js
+// 地理院地図　標準地図
+var std = L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png',
+    {id: 'stdmap', attribution: "<a href='http://portal.cyberjapan.jp/help/termsofuse.html' target='_blank'>国土地理院</a>"})
+// 地理院地図　淡色地図
+var pale = L.tileLayer('http://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png',
+    {id: 'palemap', attribution: "<a href='http://portal.cyberjapan.jp/help/termsofuse.html' target='_blank'>国土地理院</a>"})
+// OSM Japan
+var osmjp = L.tileLayer('http://tile.openstreetmap.jp/{z}/{x}/{y}.png',
+    { id: 'osmmapjp', attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors' });
+// OSM本家
+var osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    { id: 'osmmap', attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors' });
+
+var baseMaps = {
+    "地理院地図 標準地図" : std,
+    "地理院地図 淡色地図" : pale,
+    "OSM" : osm,
+    "OSM japan" : osmjp
+};
+    
+var map = L.map('map', {layers: [pale]});
+map.setView([43.062083, 141.354389], 12);
+
+// コントロールはオープンにする
+L.control.layers(baseMaps, null, {collapsed:false}).addTo(map);
+
+//スケールコントロールを追加（オプションはフィート単位を非表示）
+L.control.scale({imperial: false}).addTo(map);
+
+/* GeoJSONレイヤーを追加します */
+$.getJSON("/world/geojson/", function(data) {
+    L.geoJson(data).addTo(map);
+});
+```
+
+#### templates/world/index.html編集
+マップページのHTMLを記述します。
+```html
+(env) $ templates/world/index.html
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <title>GeoDjango Hands-on</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+    integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+    crossorigin=""></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-tilelayer-geojson/1.0.4/TileLayer.GeoJSON.min.js"></script>
+
+</head>
+<body>
+    <div id="map"></div>
+    <link rel="stylesheet" href="{% static 'world/css/app.css' %}">
+    <script type="text/javascript" src="{% static 'world/js/app.js' %}"></script>
+</body>
+</html>
+```
+
+#### world/view.py編集
+2つのビューを作成します。
+* REST APIでGeoJSONを返すビュー
+* マップ表示するビュー
+
+REST APIでGeoJSONを返すビューを作成。札幌市中央区のポリゴンを返します。
 ```python
 (env) $ vi world/view.py
 from rest_framework.views import APIView
@@ -238,36 +375,28 @@ import json
 from django.core.serializers import serialize
 
 class GeojsonAPIView(APIView):
-    """
-    GeoJsonデータ取得
-    @return geojson形式
-    """
-
     def get(self, request, *args, **keywords):
         try:
-            # "crs": {"type": "name", "properties": {"name": "urn:ogc:def:crs:OGC:1.3:CRS84"}},
-            encjson  = serialize('geojson', Border.objects.filter(n03_003="札幌市"),srid=4326, geometry_field='geom', fields=('n03_004',) )
+            encjson  = serialize('geojson', Border.objects.filter(n03_004="中央区"),srid=4326, geometry_field='geom', fields=('n03_003','n03_004',) )
             result   = json.loads(encjson)
             response = Response(result, status=status.HTTP_200_OK)
-
         except Exception as e:
             traceback.print_exc()
             response = Response({}, status=status.HTTP_404_NOT_FOUND)
-
         except:
             response = Response({}, status=status.HTTP_404_NOT_FOUND)
 
         return response
 ```
 
-#### urls.py設定
-URLを設定します
+マップ表示するビューを作成
 ```python
-(env) $ vi geodjango/urls.py
-from world.views import GeojsonAPIView
+(env) $ vi world/view.py
+from django.shortcuts import render
 
-urlpatterns = [
-    :
-    path('geojson/', GeojsonAPIView.as_view(), name='geojson_view'),
-]
+def index(request):
+    contexts = {}
+
+    return render(request,'world/index.html',contexts)
 ```
+
