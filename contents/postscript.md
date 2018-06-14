@@ -23,6 +23,9 @@
 │   └── wsgi.py
 ├── manage.py
 ├── requirements.txt
+├── templates
+│   └── registration
+│       └── login.html
 └── world
     ├── __init__.py
     ├── admin.py
@@ -37,8 +40,8 @@
     ├── load_hokkaido.py
     ├── load_public_facility.py
     ├── migrations
-    │   ├── 0001_initial.py
-    │   └── __init__.py
+    │   ├── __init__.py
+    │   └── 0001_initial.py
     ├── models.py
     ├── serializers.py
     ├── static
@@ -53,7 +56,6 @@
     │   └── world
     │       └── index.html
     ├── tests.py
-    ├── urls.py
     └── views.py
 ```
 

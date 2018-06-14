@@ -410,4 +410,117 @@ def index(request):
     return render(request,'world/index.html',contexts)
 ```
 
-## ログイン画面
+## ユーザ認証
+
+Webサイトで公開した場合に誰でもアクセス可能な状態です。
+サイト閲覧を権限を管理するためにアクセス制限機能をつけます。
+
+編集対象ファイル
+```
+├── geodjango
+│   ├── settings.py      <-- ログインURLを指定
+│   └── urls.py          <-- URLを設定
+├── templates
+│   └── registration
+│       └── login.html   <-- ユーザ向けログイン画面
+└── world
+    └── views.py         <-- ユーザ認証が必要な関数を指定
+```
+<u>**Note**</u>
+* ユーザ管理は、管理画面 http://127.0.0.1:8000/admin/ で行います。
+* ユーザ認証はセッションで行ってます。
+* デフォルトのセッション有効期間は2週間です
+
+<u>**参考サイト**</u>
+* Django2 でユーザー認証（ログイン認証）を実装するチュートリアル -2- サインアップとログイン・ログアウト - https://it-engineer-lab.com/archives/544
+
+ユーザー認証の機能はDjangoの標準で用意されています。ユーザ向けに表示するHTML等は別途作成する必要があります。
+```python
+accounts/login/ [name='login']
+accounts/logout/ [name='logout']
+accounts/password_change/ [name='password_change']
+accounts/password_change/done/ [name='password_change_done']
+accounts/password_reset/ [name='password_reset']
+accounts/password_reset/done/ [name='password_reset_done']
+accounts/reset/<uidb64>/<token>/ [name='password_reset_confirm']
+accounts/reset/done/ [name='password_reset_complete']
+```
+
+テンプレートを読み込むディレクトリを追加
+```python
+(env) $ vi geodjango/settings.py
+TEMPLATES = [
+    {
+        'DIRS': [os.path.join(BASE_DIR, 'templates')], 
+         :
+　　:
+```
+
+ログイン関連のURLを設定します
+```python
+(env) $ vi geodjango/settings.py
+LOGIN_URL='/accounts/login'　<-- ログインURL
+LOGIN_REDIRECT_URL='/'      <-- ログイン後トップページにリダイレクト
+LOGOUT_REDIRECT_URL='/'     <-- ログアウト後トップページにリダイレクト
+```
+
+アカウントにURLを追加
+```python
+(env) $ vi geodjango/urls.py
+ urlpatterns = [
+     :
+    path('accounts/', include('django.contrib.auth.urls')),
+     :
+```
+
+アクセス制限させたい関数に@login_requiredアノテーションをつけます
+```python
+(env) $ vi world/view.py
+from django.contrib.auth.decorators import login_required
+
+@login_required   <-- アノテーションをつける
+def index(request):
+  : 
+```
+
+ログイン画面のHTMLを作成します
+```python
+(env) $ vi templates/registration/login.html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <section class="common-form">
+    {% if form.errors %}
+        <p class="error-msg">Your username and password didn't match. Please try again.</p>
+    {% endif %}
+
+    {% if next %}
+        {% if user.is_authenticated %}
+        <p class="error-msg">Your account doesn't have access to this page. To proceed,
+            please login with an account that has access.</p>
+        {% else %}
+            <p class="error-msg">Please login to see this page.</p>
+        {% endif %}
+    {% endif %}
+
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="submit">Login</button>
+        <input type="hidden" name="next" value="{{ next }}"/>
+    </form>
+    </section>
+</body>
+</html>
+```
+
+メインページで、http://127.0.0.1:8000/にアクセスした時に、ログインしてない時は、ログイン画面に遷移します。
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/501.png" width=50% style="border:1px #000 solid;">
+</div>
