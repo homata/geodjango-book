@@ -30,7 +30,7 @@ Summary
 * [GeoDjangoのインストール](geodjango/install.md)
 * [PostGISへデータインポート](geodjango/import.md)
 * [GeoDjangoのチュートリアル](geodjango/tutorial.md)
-* [GeoDjangoで出来ること (データの配信方法など)](geodjango/tips.md)
+* [GeoDjango Tips](geodjango/tips.md)
 
 ## さいごに
 * [参考サイト](contents/reference.md)

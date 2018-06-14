@@ -11,6 +11,9 @@ Pythonで作成されたWebアプリケーションを作成するフレーム�
     * Django ドキュメント - https://docs.djangoproject.com/ja/2.0/
     * DjangoCongressJP 2018 - https://djangocongress.jp/
 
+### 参考リンク (英語サイト)
+* djangosnippets - https://djangosnippets.org/
+
 ### 参考リンク
 * モダンDjango入門 - https://codezine.jp/article/corner/723
 * Qiita Django - https://qiita.com/tags/django

@@ -29,6 +29,8 @@ WebGISアプリ開発入門として、PythonのWebフレームワークであ�
 * [Django Girls Tutorial 日本語版](https://djangogirlsjapan.gitbooks.io/workshop_tutorialjp/content/)
 * [GeoDjango Tutorial](https://docs.djangoproject.com/en/2.0/ref/contrib/gis/tutorial/)
 * [PostGISとGeoDjangoを使ってLeafletでGeoJSON Tile Layerを表示してみる(1) – インストール編 –](https://blog.bitmeister.jp/?p=3467)
+* [モダンDjango入門](https://codezine.jp/article/corner/723)
+* [Django Rest Framework GISで誰でも簡単RESTful Geo API](http://monomoti.hatenablog.jp/entry/2015/12/15/000000)
 
 # 免責
 
@@ -36,3 +38,14 @@ WebGISアプリ開発入門として、PythonのWebフレームワークであ�
 * 当該情報に基づいて、利用者が被る一切の損害について、何等責任を負いません。
 * 他のウェブサイトやリソースへのリンクを記述している場合がありまが、リンク先の内容や真偽等につきまして一切責任を負いかねます。
 * 予告なしに内容の変更または廃止する場合があります
+
+# 使用データ
+国土数値情報　ダウンロードサービス - <http://nlftp.mlit.go.jp/ksj/index.html>の北海道のデータを使用します
+* 国土交通省国土政策局「国土数値情報（行政区域データ）」 (N03-170101_01_GML)
+    - <http://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-v2_3.html>
+* 国土交通省国土政策局「国土数値情報（小学校区データ）」 (A27-16_01_GML)
+    - <http://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A27-v2_1.html>
+* 国土交通省国土政策局「国土数値情報（公共施設データ）」 (P02-06_01_GML)
+    - <http://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P02-v4_0.html>
+* 国土交通省国土政策局「国土数値情報（バス停留所データ）」 (P11-10_01_GML)
+    - <http://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P11.html>
