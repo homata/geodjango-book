@@ -14,12 +14,14 @@ pipコマンドを使って追加をします。
 
 ```python
 (env) $ pip install djangorestframework-gis
-    -> djangorestframework==3.8.2
-    -> djangorestframework-gis==0.13
 (env) $ pip install django-filter   # Filtering support
-    -> django-filter==1.1.0
 (env) $ pip install markdown        # Markdown support for the browsable API.
-    -> Markdown==2.6.11
+(env) $ pip freeze
+  :
+djangorestframework==3.8.2
+djangorestframework-gis==0.13
+django-filter==1.1.0
+Markdown==2.6.11
 ```
 
 <u>**Note**</u>
