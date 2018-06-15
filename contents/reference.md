@@ -16,17 +16,23 @@ Pythonで作成されたWebアプリケーションを作成するフレーム�
 
 ### 参考リンク
 * モダンDjango入門 - https://codezine.jp/article/corner/723
-* Qiita Django - https://qiita.com/tags/django
 * PaizaCloud - https://paiza.cloud/ja/
 * 「現場で使える 基礎Django」を読みました #技術書典 - http://thinkami.hatenablog.com/entry/2018/04/25/081142
 * 侍エンジニア塾が運営するプログラミング入門者向け学習情報サイト - https://www.sejuku.net/blog/category/django
+* akiyoko blog - http://akiyoko.hatenablog.jp/archive/category/Django
+
+#### Qiita 
+* Qiita Django - https://qiita.com/tags/django
+* Django Advent Calendar
+    - Django Advent Calendar 2016 - https://qiita.com/advent-calendar/2016/django
+    - Django Advent Calendar 2017 - https://qiita.com/advent-calendar/2017/django
 
 ###  書籍
 * 基礎から学ぶ Django - https://www.amazon.co.jp/dp/486354247X
 * 現場で使える 基礎 Django - https://booth.pm/ja/items/823251
+* Two Scoops of Django 1.11: Best Practices for the Django Web Framework - https://www.amazon.co.jp/dp/0692915729/
 
 ### DjangoGrilsDocs
-
 * Django Girls Tutorial 英語版 - https://tutorial.djangogirls.org/en/
 * Django Girls Tutorial 日本語版 - https://djangogirlsjapan.gitbooks.io/workshop_tutorialjp/content/
     * Django GirlsのTutorial を翻訳しよう - https://bit.ly/2rWD1tE
