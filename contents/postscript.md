@@ -1,6 +1,7 @@
 # おわりに
 
 * この資料のURL - https://github.com/homata/geodjango-book
+    - GitBook - https://homata.gitbook.io/geodjango/
 * サンプルソースコード - https://github.com/homata/geodjango-hands-on
 * 使用GeoJSONファイル
     - 国土数値情報　バス停留所データ 
