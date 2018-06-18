@@ -124,7 +124,7 @@ class FacilityViewSet(viewsets.ModelViewSet):
     pagination_class = MyPagination
     filter_backends = (DistanceToPointFilter,)
     distance_filter_field = 'geom'
-    distance_filter_convert_meters = True
+    distance_filter_convert_meters = False
 
 class BusstopViewSet(viewsets.ModelViewSet):
     queryset = Busstop.objects.all()
@@ -144,7 +144,7 @@ class BusstopViewSet(viewsets.ModelViewSet):
     - InBBoxFilter: バウンダリでの絞り込むフィルタ。南西端、北東端の経度、緯度を指定する
 * distance_filter_field: フィルタの対象フィールドを設定
 * bbox_filter_field: フィルタの対象フィールドを設定
-* distance_filter_convert_meters: 
+* distance_filter_convert_meters: 距離でのフィルター (??? 多分。。。。)
 
 **django-rest-framework-gisのフィルター**
 * InBBOXFilter

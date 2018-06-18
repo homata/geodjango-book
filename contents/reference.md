@@ -39,7 +39,6 @@ Pythonで作成されたWebアプリケーションを作成するフレーム�
     * Github - https://github.com/DjangoGirlsJapan/tutorialJP
 
 ## GeoDjango
-
 GeoDjangoはDjangoに含まれている地理空間データ用のモジュールです。
 
 * GeoDjango - https://docs.djangoproject.com/en/2.0/ref/contrib/gis/
@@ -51,7 +50,6 @@ GeoDjangoはDjangoに含まれている地理空間データ用のモジュー�
 * GeoDjangoではじめる地理空間情報 - https://speakerdeck.com/homata/geodjangodehazimerudi-li-kong-jian-qing-bao
 * PostGISとGeoDjangoを使ってLeafletでGeoJSON Tile Layerを表示してみる(1) – インストール編 – - https://blog.bitmeister.jp/?p=3467
 * Django Rest Framework GISで誰でも簡単RESTful Geo API - http://monomoti.hatenablog.jp/entry/2015/12/15/000000
-
 
 ## Python
 プログラミング言語の一つ。コードの可読性を高めた言語です。

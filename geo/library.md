@@ -20,7 +20,7 @@
 </div>
 
 ## 代表的な地図表示のJavaScriptライブラリ
-地図表示するためのJavaScriptのオープンソースライブラリとして「OpenLayers」と「Leaflet.js」が代表的である。Google Maps JavaScript APIも地図表示するためのJavaScriptのライブラリである
+地図表示するためのJavaScriptのオープンソースライブラリとして「OpenLayers」と「Leaflet.js」が代表的である。Google Maps JavaScript APIも地図表示するためのJavaScriptのライブラリである。
 
 ### OpenLayers 
 * OSGeo財団のプロジェクトとなっている。GISとしての機能は豊富であるがGISの知識が多少必要であるが細かい設定が出来る
@@ -38,3 +38,10 @@
 * GISの知識のない開発者でも容易にタイルベースのWeb地図を表示できる
 * Web開発の経験があると理解しやすいくシンプルに使える
 * プラグインが充実している
+
+<u>**参考:その他のJavaScript例**</u>
+* D3.js - https://d3js.org/
+* Cesium - https://cesiumjs.org/
+* deck.gl -  http://uber.github.io/deck.gl/
+* turf.js - http://turfjs.org/
+* mapbox.js - https://www.mapbox.com/mapbox.js/api/

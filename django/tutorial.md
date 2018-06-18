@@ -28,7 +28,7 @@ Djangoでは、アプリケーションごとに開発を進めていきます�
 これがWebアプリのルートとなります。
 
 プロジェクト作成コマンド<br>
-$ django-admin startproject <プロジェクト名>
+$ django-admin startproject <プロジェクト名> [<ディレクトリ>]
 
     MacOSの場合
     (env) $ django-admin startproject geodjango
@@ -104,6 +104,9 @@ $ vi geodjango/settings.py
 
 manage.py migrateコマンドを実行して、データベースにテーブルを作成します。
 
+migrateコマンド<br>
+$ python manage.py migrate
+
     (env) $ python manage.py migrate
     Operations to perform:
     Apply all migrations: admin, auth, contenttypes, sessions
@@ -131,6 +134,9 @@ manage.py migrateコマンドを実行して、データベースにテーブル
 ここまで上手く出来ているかを確認します。
 
 manage.pyのrunserverコマンドを実行することで、Djangoのサーバーを起動します。
+
+Djangoのサーバー起動コマンド<br>
+$ python manage.py runserver
 
     Webアプリ起動
     (env) $ python manage.py runserver
@@ -162,10 +168,11 @@ Windowsの場合は、Ctrl+Breakで停止することがあります。
 ## 管理画面
 
 管理画面にログイン権限のある管理ユーザのアカウントを作成します。
+Webアプリ起動されていたら、CTRL+Cで一旦止めます
 
-    Webアプリ起動されていたら、CTRL+Cで一旦止めます
+管理ユーザのアカウント<br>
+$ python manage.py createsuperuser
 
-    管理ユーザのアカウントを作成します
     (env) $ python manage.py createsuperuser
     Username (leave blank to use 'homata'): admin
     Email address: hoge@fuga.com

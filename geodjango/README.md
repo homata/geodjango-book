@@ -1,10 +1,11 @@
 # GeoDjangoの概要
 
 ## GeoDjangoとは
-GeoDjangoはDjangoに含まれている地理空間データ用のモジュールです
-地理情報システム (GIS) のWeb アプリケーションが作成が可能になります
+GeoDjangoはDjangoに含まれている地理空間データ用のモジュールです。
 
-<u>**特徴**</u>
+GeoDjangoでは地理情報システム (GIS) のWebアプリケーションが作成が可能になります。
+
+<u>**GeoDjangoの機能**</u>
 * Modelに地理空間情報フィールド を追加 (GeometryField, PointField ...)
 * ORMで空間演算に対応 (rast__contains (ST_Contains) ....)
 * Djanngoの管理画面で地理地理情報フィールドの編集 (GeoModelAdmin  ...)
@@ -16,6 +17,19 @@ GeoDjangoはDjangoに含まれている地理空間データ用のモジュー�
 <div align="center" style="margin-bottom:50px;margin-top:30px">
     <img src="images/000.png" width=60% style="border:1px #000 solid;">
 </div>
+
+## GeoDjangoの利用想定
+* インタラクティブにバックエンドで計算してからフロントサイドへ送信
+* アクセスユーザーの制限と管理
+* Pythonベースのデータ分析や機械学習等との連携または融合
+    - pypi: https://pypi.org/
+* Pythonベースの地理情報ライブラリの利用
+    - 代表的な例 
+        - geopandas - pandasの地理情報拡張
+        - osmnx - Open Street Mapのデータを操作
+        - folium - LeafletをPythonから操作
+        - geopy - 住所→緯度経度　緯度経度→住所　変換
+        - shapely - GEOSライブラリを使用して、地理情報オブジェクトを図形的にいろいろ扱う
 
 ## GeoDjangoのポイント
 

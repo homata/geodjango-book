@@ -1,24 +1,20 @@
 インストール
 ========
-
-下記のライブラリをインストールします
+GeoDjangoで開発する為に必要なライブラリをインストールします
 
 * Python3.5以上
 * PostgreSQL 9.5以上
-    - PostGIS 2.x
+    - PostGIS 2.x以上
 * OSGeo4W (GISライブラリ)
     - GDAL(Geospatial Data Abstraction Library) 
     - GEOS (Geometry Engine, Open Source) 
     - PROJ4 (Cartographic Projections Library) 
- 
-
 
 # Pythonのインストール
 
-Python 3.6 をインストールします。
+Python 3.6のインストール方法の説明をWidowsとMac(OSX)の環境で説明します
 
-Pythonのインストールは下記も参考にすると良いでしょう。
-
+<u>**Pythonインストール参考**</u>
 * python.jpの環境構築ガイド - https://www.python.jp/install/install.html
 * Python Boot Campのテキスト - http://pycamp.pycon.jp/textbook/1_install.html
 
@@ -30,8 +26,7 @@ Windowsのシステム情報でシステムの種類が32-bitバージョンか6
     <img src="images/windows/000.png" width=60% style="border:1px #000 solid;">
 </div>
 
-
-Python for Windowsを <https://www.python.org/downloads/windows/>　からダウンロードしてください。最新版の「Latest Python 3 Release - Python 3.6.5」(2018年6月4日現在)をダウンロードしてください。
+Python for Windowsを <https://www.python.org/downloads/windows/>　から最新版の「Latest Python 3 Release - Python 3.6.5」(2018年6月4日現在)をダウンロードしてください。
 
     Python Releases for Windows    
         Latest Python 3 Release - Python 3.6.5
@@ -41,7 +36,7 @@ Python for Windowsを <https://www.python.org/downloads/windows/>　からダウ
     <img src="images/windows/001.png" width=60% style="border:1px #000 solid;">
 </div>
 
-
+Widnowsの環境によってダウンロードするファイルが違いますのでご注意ください。
 * 64ビット版のWindowsの場合
     -  "Windows x86-64 executable installer" (Windows x86-64実行可能インストーラー)をダウンロードしてください。 
 * 32ビット版のWindowsの場合 
@@ -87,20 +82,20 @@ Python for Windowsを <https://www.python.org/downloads/windows/>　からダウ
     <img src="images/windows/008.png" width=60% style="border:1px #000 solid;">
 </div>
 
-**注意** パソコンの環境によって「python」ではなく「python3」という場合があります
+<u>**注意**</u><br>
+パソコンの環境によって「python」ではなく「python3」となる場合があります。パソコンの環境を確認ください。「python3」だった場合はこれ以降は「python」を「python3」と読みかえてください
 
-    例）python3 -V
+    例）$ python3 -V
 
-pipのバージョンも確認します
+pipのバージョンも確認します。pipも、Pythonと同様に環境によりpip3となる場合があります。これも「pip」を「pip3」と読みかえてください
 
-    C:¥xxx> pip --version
+    $ pip3 --version
     pip 9.0.3 from xxx (python 3.6)
-
 
 ### **<u>Mac(OSX)</u>**
 
 
-Python for Macを <https://www.python.org/downloads/mac-osx/>　からダウンロードしてください。最新版の「Latest Python 3 Release - Python 3.6.5」(2018年6月4日現在)をダウンロードしてください。
+Python for Macを <https://www.python.org/downloads/mac-osx/>　から最新版の「Latest Python 3 Release - Python 3.6.5」(2018年6月4日現在)をダウンロードしてください。
 
     Python Releases for Mac OS X
         Latest Python 3 Release - Python 3.6.5
@@ -110,21 +105,24 @@ Python for Macを <https://www.python.org/downloads/mac-osx/>　からダウン�
 OSの環境によって、macOS 64-bit/32-bit installer(for Mac OS X 10.6 and later)または、macOS 64-bit installer（for OS X 10.9 and later）を選択してダウンロードしてください。
 ダウンロードされたら、pkgファイル（python-3.6.5-macosx10.6.pkg）をクリックしてインストーラーを実行してください。
 
-インストールが正しく行われたか確認するために、 ターミナルを開いて、python3もしくはpythonコマンドタイプしてみてください
+インストールが正しく行われたか確認するために、 ターミナルを開いて「python3」もしくは「python」コマンドをタイプしてみてください
 
-    $ python3 -V
+    $ python -V
     Python 3.6.5
 
-
-**注意** Macの場合、デフォルトでpython2がインストールされています。必ずバージョンを確認して[
-「python -V」が2系だった場合は、「python3」を使うようにしてください
+<u>**注意**</u><br>
+Macの場合、デフォルトでpython2がインストールされています。必ずバージョンを確認して
+「python -V」が2系だった場合は、「python3」を使うようにしてください。「python3」だった場合はこれ以降は「python」を「python3」と読みかえてください
 
     $ python -V
     Python 2.7.14
 
-pipのバージョンも確認します
+    $ python3 -V
+    Python 3.6.5
 
-    $ pip --version
+pipのバージョンも確認します。pipも、Pythonと同様に環境によりpip3となる場合があります。これも「pip」を「pip3」と読みかえてください
+
+    $ pip3 --version
     pip 9.0.3 from xxx (python 3.6)
 
 
@@ -132,6 +130,7 @@ pipのバージョンも確認します
 
 ### **<u>Windows</u>**
  
+<u>**参考**</u><br>
  * [GeoDjango Installation - Install Windows](https://docs.djangoproject.com/en/2.0/ref/contrib/gis/install/#windows)
 
 
@@ -149,7 +148,7 @@ Enterprise DBのWebサイトから PostgreSQL 9.x　のインストーラー <ht
 
 
 PostgreSQLインストーラはpostgresデータベースのスーパーユーザーを作成します。
-アカウントのパスワードを一度設定するように求められます。覚えておいてください！
+パスワードは忘れないようにしてください。
 
 <div align="center" style="margin-bottom:50px;margin-top:30px">
     <img src="images/windows/103.png" width=60% style="border:1px #000 solid;">
@@ -179,7 +178,7 @@ PostgreSQLインストーラはpostgresデータベースのスーパーユー�
     <img src="images/windows/107a.png" width=60% style="border:1px #000 solid;">
 </div>
 
-インストーラが完了すると、終了時にApplication Stack Builder（ASB）を起動するように要求されます。<br> PostGISをインストールする必要があるため、このチェックボックスをオンにします。
+インストーラが完了すると、終了時にApplication Stack Builder（ASB）を起動するか質問されます。<br> PostGISをインストールする必要があるため、このチェックボックスをオンにします。
 
 <div align="center" style="margin-bottom:50px;margin-top:30px">
     <img src="images/windows/108.png" width=60% style="border:1px #000 solid;">
@@ -289,15 +288,14 @@ PostGISがチェックされていることを確認し「Next」ボタンを選
     <img src="images/windows/121.png" width=60% style="border:1px #000 solid;">
 </div>
 
-正常にインストールされた場合、メニューの「PostGIS」のグループが作成されます
+正常にインストールされた場合、メニューの「PostGIS」のグループが作成されます。
+PostgreSQLサーバはWindowsが起動時に自動で実行されるように設定されます。
 
 Windows10の場合
 <div align="center" style="margin-bottom:50px;margin-top:30px">
     <img src="images/windows/122.png" width=60% style="border:1px #000 solid;">
 </div>
 
-
-正常にインストールされた場合、PostgreSQLサーバは、システムがWindowsサービスとして起動するたびにバックグラウンドで実行されます。 
 
 ##### PostgreSQL/PostGIS環境変数、パスの設定
 
@@ -354,14 +352,14 @@ Windowsメニューから「コマンドプロンプト」を起動して、Pa
 
 ### **<u>Mac(OSX)</u>**
 
+<u>**参考**</u><br>
 * [GeoDjango Installation - Install Mac](https://docs.djangoproject.com/en/2.0/ref/contrib/gis/install/#macos)
-
-#### PostGIS/PostGIS/OSGeo4W (GISライブラリ)のインストール
 
 Homebrew (パッケージ管理システム) を使用してインストールをします。
 Homebrewをインストールしてない場合は、Homebrew公式サイト <https://brew.sh/index_ja> を参考にしてHomebrewをインストールしてください。
 
-参考: MacにHomebrewを導入する方法 - https://qiita.com/balius_1064/items/ac7dff5ef10eaf69996f
+Homebrewインストール参考<br>
+MacにHomebrewを導入する方法 - https://qiita.com/balius_1064/items/ac7dff5ef10eaf69996f
 
     インストール方法
     1. AppStoreでXcodeのインストール
@@ -374,10 +372,33 @@ Homebrewをインストールしてない場合は、Homebrew公式サイト <ht
         Your system is ready to brew.
     となっていれば導入成功です。
 
-下記のbrewコマンドを入力してPostGIS/PostGIS/OSGeo4W (GISライブラリ)のインストール
+下記のbrewコマンドを入力してPostgreSQL/PostGIS/GISライブラリのインストール
 をします。
 
     $ brew install postgresql
     $ brew install postgis
     $ brew install gdal
 
+
+PostgreSQLの起動
+
+    $ pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+
+    $ psql --version
+    psql (PostgreSQL) 9.6
+
+    データベース確認
+    $ psql -U postgres -l
+                                List of databases
+        Name     |  Owner   | Encoding | Collate | Ctype | Access privileges
+    -------------+----------+----------+---------+-------+-------------------
+    postgres    | homata   | UTF8     | C       | C     |
+    template0   | homata   | UTF8     | C       | C     | =c/homata        +
+                |          |          |         |       | homata=CTc/homata
+    template1   | homata   | UTF8     | C       | C     | =c/homata        +
+                |          |          |         |       | homata=CTc/homata
+    (xx rows)
+
+PostgreSQLの停止
+
+    $ pg_ctl -D /usr/local/var/postgres stop

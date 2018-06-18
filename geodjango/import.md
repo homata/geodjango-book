@@ -266,6 +266,11 @@ Applying world.0001_initial... OK
 GeoJSONファイルのデータをインポートをするスクリプトファイルを作成し、これを実行してデータをインポートします。
 インポートにはユーティリティのdjango.contrib.gis.utils.LayerMappingを利用します。
 
+<u>**Note**</u><br>
+GDALのコマンドラインユーティリティを利用してインポートすることも出来ます。
+* ogr2ogr: GDALのコマンドラインユーティリティ
+* shp2pgsql: ESRI shapefile用のユーティリティ
+
 ### 行政区域データ
 
 行政区域データのインポートスクリプトを作成します
