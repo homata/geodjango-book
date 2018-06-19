@@ -31,6 +31,7 @@ Summary
 * [PostGISへデータインポート](geodjango/import.md)
 * [GeoDjangoのチュートリアル](geodjango/tutorial.md)
 * [GeoDjango Tips](geodjango/tips.md)
+* [Django/GeoDjangoレシピ](geodjango/recipe.md)
 
 ## さいごに
 * [参考サイト](contents/reference.md)

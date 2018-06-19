@@ -102,3 +102,9 @@ OSGeo財団（The Open Source Geospatial Foundation）は、オープンソー�
     - 国土数値情報　ダウンロードサービス - http://nlftp.mlit.go.jp/ksj/index.html
     - G空間情報センター - https://www.geospatial.jp/
     - 地図で見る統計(統計GIS) - https://www.e-stat.go.jp/gis
+
+## その他
+* [.gitignoreファイル作成](https://www.gitignore.io/)
+* [ngrokでトンネリング](https://ngrok.com/)
+* [localtunnelでトンネリング](https://localtunnel.github.io/www/)
+* [nowでデプロイ](https://zeit.co/now)
