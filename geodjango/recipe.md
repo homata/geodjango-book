@@ -92,3 +92,6 @@ DATABASES = {
 ```python
 (env)$ pip install django-geojson
 ```
+
+## データベースアクセス
+## Worker Thread Celory
