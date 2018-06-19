@@ -88,10 +88,10 @@ class BusstopSerializer(serializers.ModelSerializer):
                    "p11_004_17", "p11_004_18", "p11_004_19")
 ```
 
-#### world/view.py作成
+#### world/views.py作成
 ビューでリクエストに対するレスポンスの設定をします。
 ```python
-(env) $ vi world/view.py
+(env) $ vi world/views.py
 from rest_framework import viewsets
 from rest_framework_gis.filters import DistanceToPointFilter, InBBoxFilter
 from rest_framework.pagination import PageNumberPagination
@@ -371,14 +371,14 @@ $.getJSON("/world/geojson/", function(data) {
 </html>
 ```
 
-#### world/view.py編集
+#### world/views.py編集
 2つのビューを作成します。
 * REST APIでGeoJSONを返すビュー
 * マップ表示するビュー
 
 REST APIでGeoJSONを返すビューを作成。札幌市中央区のポリゴンを返します。
 ```python
-(env) $ vi world/view.py
+(env) $ vi world/views.py
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -403,7 +403,7 @@ class GeojsonAPIView(APIView):
 
 マップ表示するビューを作成
 ```python
-(env) $ vi world/view.py
+(env) $ vi world/views.py
 from django.shortcuts import render
 
 def index(request):
@@ -477,7 +477,7 @@ LOGOUT_REDIRECT_URL='/'     <-- ログアウト後トップページにリダイ
 
 アクセス制限させたい関数に@login_requiredアノテーションをつけます
 ```python
-(env) $ vi world/view.py
+(env) $ vi world/views.py
 from django.contrib.auth.decorators import login_required
 
 @login_required   <-- アノテーションをつける
