@@ -31,7 +31,7 @@ PostGIS is recommended, because it is the most mature and feature-rich open sour
 
 * PostGISの地理空間関数。ST_xxxxとSTで始まるものが多い
 
-    SQL例）
+    SQL文の例
     > SELECT ST_Area(geog) FROM somegeogtable;
     > SELECT road_id, ST_AsText(road_geom) AS geom, road_name FROM roads;
 
@@ -63,7 +63,7 @@ PostGIS is recommended, because it is the most mature and feature-rich open sour
 </div>
 
 <div style="font-size:xx-small">
-* https://docs.djangoproject.com/en/2.0/ref/contrib/gis/geoquerysets/ <br>A
+* https://docs.djangoproject.com/en/2.0/ref/contrib/gis/geoquerysets/ <br>
 * https://www.finds.jp/docs/pgisman/1.5.1/reference.html
 </div>
 
