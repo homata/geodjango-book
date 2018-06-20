@@ -137,8 +137,8 @@ from django.contrib.gis.db import models
 
 worldアプリケーションのmodels.pyに、GeoJSONの定義でを記述します。
 
-* 「def __str__(self):」にクラスの名称文字列を定義
-* CharFieldが 「max_length=0」になっているので「max_length=50〜256」に変更
+* __str__() にクラスの名称文字列を定義
+* CharFieldの長さが「max_length=0」になっているので「max_length=50〜256」に変更。シェープファイルではmax_lengthが出力されるがGeoJSONの場合出力されない
 
 ```python
 (env)$ vi world/models.py

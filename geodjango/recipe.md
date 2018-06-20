@@ -93,5 +93,90 @@ DATABASES = {
 (env)$ pip install django-geojson
 ```
 
-## データベースアクセス
-## Worker Thread Celory
+## Djangoで非同期処理
+Djangoで非同期処理をする場合は、分散タスク・キューのCelery - http://www.celeryproject.org/ を使う方法があります。
+
+```python
+(env)$ pip install celery
+```
+
+例として、TensorFlowを使った非同期処理を下記に記述します。
+* task queue based on message - Celery
+* used celery as broker - RabbitMQ, Redis 
+* Worker Thread of Application - e.g. TensorFlow 
+
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/800.png" width=80% style="border:1px #000 solid;">
+</div>
+
+<u>**参考**</u>
+* Using Celery with Django - http://docs.celeryproject.org/en/latest/django/first-steps-with-django.html#using-celery-with-django
+
+## SQLでデータベースアクセス
+直接にSQL文でデータベースにアクセスすることが出来ます。
+複雑な空間演算をする時などでは、SQL文を直接記述する方が良いかと思います。
+
+#### Djangoのモデルとして接続しているデータベースにアクセスする場合
+
+```python
+from django.db import connection
+
+try:
+    cursor = connection.cursor()
+    cursor.execute("SELECT * FROM database")
+
+    col_names = [desc[0] for desc in cursor.description] # カラム名取得
+
+    # fetchall()で、結果を全て取り出せる
+    rows = cursor.fetchall()
+    dict_result = []
+    for row in rows:
+        row_dict = dict(zip(col_names, row))
+        dict_result.append(row_dict)
+
+except Exception as e:
+    raise Exception()
+
+finally:
+    cursor.close()
+
+return dict_result
+```
+
+#### 外部のデータベースにアクセスする場合
+
+```python
+import psycopg2
+import psycopg2.extras # DictCursorを使用するために拡張機能をimport
+
+# Connect to an existing database
+try:
+    connection = psycopg2.connect("dbname='database' user='postgres' host='localhost' password='xxxxx' port='5432'")
+    connection.autocommit = True
+except psycopg2.Error as e:
+    raise Exception()
+
+try:
+     # Open a cursor to perform database operations
+    cursor = connection.cursor(cursor_factory=psycopg2.extras.DictCursor)
+    # Query the database and obtain data as Python objects
+    cursor.execute("SELECT * FROM database")
+
+    # fetchall()で、１結果を全て取り出せる
+    cursor = cursor.fetchall()
+    dict_result = []
+    for row in rows:
+        dict_result.append(dict(row))
+
+except psycopg2.Error as e:
+    raise Exception()
+
+finally:
+    cursor.close()
+    connection.close()
+
+return dict_result
+```
+
+<u>**参考**</u>
+* セキュリティの観点から、データベースの接続情報はソースコードに直接に記述をせずに、django-environ等で環境変数で設定することを推奨します。
