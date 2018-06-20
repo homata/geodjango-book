@@ -110,3 +110,4 @@ OSGeo財団（The Open Source Geospatial Foundation）は、オープンソー�
 * [nowでデプロイ](https://zeit.co/now)
 * [ColorBrewer - Color Advice for Maps](http://colorbrewer2.org)
 * [Geocolor.js - style geojson based on data classifications](https://github.com/morganherlocker/geocolor)
+* [geojson.io - 地理空間情報(GeoJSON)作成・編集・共有サイト](http://geojson.io/)
