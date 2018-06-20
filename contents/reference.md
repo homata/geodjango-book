@@ -108,3 +108,5 @@ OSGeo財団（The Open Source Geospatial Foundation）は、オープンソー�
 * [ngrokでトンネリング](https://ngrok.com/)
 * [localtunnelでトンネリング](https://localtunnel.github.io/www/)
 * [nowでデプロイ](https://zeit.co/now)
+* [ColorBrewer - Color Advice for Maps](http://colorbrewer2.org)
+* [Geocolor.js - style geojson based on data classifications](https://github.com/morganherlocker/geocolor)
