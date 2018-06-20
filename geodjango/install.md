@@ -219,7 +219,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.gis',       <-- 追加
-    'world',                    <-- 追加
+    'world.apps.WorldConfig',   <-- 追加 (obsolete: world)
 )
 ```
 
@@ -251,7 +251,7 @@ Webアプリ起動されていたら、CTRL+Cで一旦止めます
 管理ユーザのアカウントを作成します
 ```shell
 (env) $ python manage.py createsuperuser
-Username (leave blank to use 'homata'): admin
+Username (leave blank to use 'xxxxx'): admin
 Email address: hoge@fuga.com
 Password: xxxxxx
 Password (again): xxxxxx
