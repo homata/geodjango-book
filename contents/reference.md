@@ -12,9 +12,11 @@ Pythonで作成されたWebアプリケーションを作成するフレーム�
     * DjangoCongressJP 2018 - https://djangocongress.jp/
 
 ### 参考リンク (英語サイト)
+* Django Packages - https://djangopackages.org/
+* Awesome Django - http://awesome-django.com
 * djangosnippets - https://djangosnippets.org/
 
-### 参考リンク
+### 参考リンク (日本語サイト)
 * モダンDjango入門 - https://codezine.jp/article/corner/723
 * PaizaCloud - https://paiza.cloud/ja/
 * 「現場で使える 基礎Django」を読みました #技術書典 - http://thinkami.hatenablog.com/entry/2018/04/25/081142
@@ -27,7 +29,7 @@ Pythonで作成されたWebアプリケーションを作成するフレーム�
     - Django Advent Calendar 2016 - https://qiita.com/advent-calendar/2016/django
     - Django Advent Calendar 2017 - https://qiita.com/advent-calendar/2017/django
 
-###  書籍
+### 書籍
 * 基礎から学ぶ Django - https://www.amazon.co.jp/dp/486354247X
 * 現場で使える 基礎 Django - https://booth.pm/ja/items/823251
 * Two Scoops of Django 1.11: Best Practices for the Django Web Framework - https://www.amazon.co.jp/dp/0692915729/
@@ -94,7 +96,6 @@ OSGeo財団（The Open Source Geospatial Foundation）は、オープンソー�
 * OSGeo4W - https://trac.osgeo.org/osgeo4w/wiki/OSGeo4W_jp
 
 ## GISアプリとGIS関連データ
-
 * GISアプリケーション
     - デスクトップGIS QGIS - http://www.qgis.org
     - OSGeo-Live 11.0 コンテンツ - https://live.osgeo.org/ja/overview/overview.html
@@ -111,3 +112,6 @@ OSGeo財団（The Open Source Geospatial Foundation）は、オープンソー�
 * [ColorBrewer - Color Advice for Maps](http://colorbrewer2.org)
 * [Geocolor.js - style geojson based on data classifications](https://github.com/morganherlocker/geocolor)
 * [geojson.io - 地理空間情報(GeoJSON)作成・編集・共有サイト](http://geojson.io/)
+
+## JavaScript
+* [Tabulator - Interactive Tables Made Easy]( http://tabulator.info/)
