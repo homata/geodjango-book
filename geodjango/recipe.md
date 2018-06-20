@@ -42,6 +42,7 @@ GitHub等で管理したソースコードからパスワードが漏洩する�
 (env)$ pip install django-environ
 ```
 
+環境変数ファイル.envを編集
 ```python
 (env)$ vi .env
 # PostgreSQL
@@ -53,19 +54,22 @@ POSTGRES_HOST=127.0.0.1
 POSTGRES_PORT=5432
 ```
 
+設定ファイル config/settings.py を編集
 ```python
 (env)$ vi config/settings.py
+import os
 import environ
+
 root = environ.Path(__file__) - 3
 env = environ.Env(DEBUG=(bool, False),)
-environ.Env.read_env()
 
-SITE_ROOT = root()
+READ_DOT_ENV_FILE = env.bool('DJANGO_READ_DOT_ENV_FILE', True)
+if READ_DOT_ENV_FILE:
+    env_file = str(ROOT_DIR.path('.env'))
+    env.read_env(env_file)
 
-DEBUG = env('DEBUG')
-TEMPLATE_DEBUG = DEBUG
+DEBUG = env.bool('DJANGO_DEBUG', False)
 
-# for postgres
 DATABASES = {
     'default': {
         'ENGINE': os.environ['POSTGRES_ENGINE'],
