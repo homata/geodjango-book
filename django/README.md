@@ -24,14 +24,31 @@ Python2系の場合は、Django 1.11 LTSでPython 2.7をサポートしていま
     - セキュリティを担保している
 
 参考:
-* Design philosophies - https://docs.djangoproject.com/en/1.11/misc/design-philosophies/
+* Design philosophies - https://docs.djangoproject.com/en/2.0/misc/design-philosophies/
 * Djangoで作られたサイト - https://www.djangosites.org/
 * HotFramework - https://hotframeworks.com/languages/python
 
+Python Frameworks
 <div align="center" style="margin-bottom:50px;margin-top:30px">
-    <img src="images/000.png" width=50% style="border:1px #000 solid;">
+    <img src="images/000.png" width=80% style="border:1px #000 solid;">
 </div>
 
+top-frameworks - https://hotframeworks.com/#top-frameworks
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/102.png" width=80% style="border:1px #000 solid;">
+</div>
+
+What Python version can I use with Django? - https://docs.djangoproject.com/en/2.0/faq/install/#what-python-version-can-i-use-with-django
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/101.png" width=60% style="border:1px #000 solid;">
+</div>
+
+Django Supported Versions - https://www.djangoproject.com/download/#supported-versions
+<div align="center" style="margin-bottom:50px;margin-top:30px">
+    <img src="images/100.png" width=60% style="border:1px #000 solid;">
+</div>
+
+* LTS(Long Term Support)
 
 <u>**Djangoアプリの処理の流れ**</u>
 
@@ -60,3 +77,29 @@ Djangoは下記のような流れでクライアントからのリクエスト�
 * メンテナンス性能が高い
     - 各ファイルの役割が決まっている (ファイルの修正が煩雑に感じる場合はある)
     - コード可読性は高い
+
+
+## PythonのWebアプリケーションフレームワーク
+
+### Flask
+Flask - http://flask.pocoo.org/
+
+軽量なウェブアプリケーションフレームワーク。[Werkzeug](http://werkzeug.pocoo.org/) と[Jinja2](http://jinja.pocoo.org/docs/2.9/)テンプレートエンジンを基に作られている。
+「マイクロフレームワーク」ともいわれシンプルで拡張性が高いことが特徴。
+
+### Tornado
+Tornado - http://www.tornadoweb.org/en/stable/
+
+スケーラブルでノンブロッキング(非同期通信)なWebサーバフレームワークで、Jupyter Notebookで使われている。
+ノンブロッキングI/Oを使用することで数万のコネクションをオープンに出来るため、Node.jsのPython版ともいえる。
+
+### Bottle
+Bottle - http://bottlepy.org/docs/dev/
+
+シンプルなフレームワークで、Pythonファイルを1つで構成されている。フレームワーク初心者にとってはわかりやすいものです。
+
+### Pyramid
+Pyramid - https://docs.pylonsproject.org/projects/pyramid/en/latest/
+
+柔軟性が高く、小規模から大規模まで幅広く対応できるのが特徴。
+フルスタックなDjangoとは違い、開発者が自身が各種ライブラリを組み合わせることが出来るので柔軟性が高い。

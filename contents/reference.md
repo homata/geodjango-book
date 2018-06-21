@@ -15,6 +15,7 @@ Pythonで作成されたWebアプリケーションを作成するフレーム�
 * Django Packages - https://djangopackages.org/
 * Awesome Django - http://awesome-django.com
 * djangosnippets - https://djangosnippets.org/
+* simple is better than complex - https://simpleisbetterthancomplex.com/
 
 ### 参考リンク (日本語サイト)
 * モダンDjango入門 - https://codezine.jp/article/corner/723
@@ -22,6 +23,8 @@ Pythonで作成されたWebアプリケーションを作成するフレーム�
 * 「現場で使える 基礎Django」を読みました #技術書典 - http://thinkami.hatenablog.com/entry/2018/04/25/081142
 * 侍エンジニア塾が運営するプログラミング入門者向け学習情報サイト - https://www.sejuku.net/blog/category/django
 * akiyoko blog - http://akiyoko.hatenablog.jp/archive/category/Django
+* 偏った言語信者の垂れ流し - https://tokibito.hatenablog.com/
+* naritoブログ - https://torina.top/
 
 #### Qiita 
 * Qiita Django - https://qiita.com/tags/django
@@ -29,10 +32,14 @@ Pythonで作成されたWebアプリケーションを作成するフレーム�
     - Django Advent Calendar 2016 - https://qiita.com/advent-calendar/2016/django
     - Django Advent Calendar 2017 - https://qiita.com/advent-calendar/2017/django
 
-### 書籍
-* 基礎から学ぶ Django - https://www.amazon.co.jp/dp/486354247X
+### 書籍 (日本語)
+* 基礎から学ぶ Django - https://www.amazon.co.jp/dp/486354247X/
 * 現場で使える 基礎 Django - https://booth.pm/ja/items/823251
+* Python Django 超入門 - https://www.amazon.co.jp/dp/4798054488
+
+### 書籍 (洋書)
 * Two Scoops of Django 1.11: Best Practices for the Django Web Framework - https://www.amazon.co.jp/dp/0692915729/
+* Django for Beginners - https://www.amazon.com/dp/1980377898/
 
 ### DjangoGrilsDocs
 * Django Girls Tutorial 英語版 - https://tutorial.djangogirls.org/en/
