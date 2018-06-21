@@ -60,3 +60,7 @@
     └── views.py
 ```
 
+## Who am i
+小俣 博司 / Hiroshi Omata
+* facebook - https://www.facebook.com/op.homata
+* twitter (@homata) - https://twitter.com/homata
