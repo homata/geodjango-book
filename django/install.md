@@ -45,16 +45,16 @@ $ python -m venv <仮想環境の名前(例)env)>
         env/
     Windowsの場合
         c:¥> dir
-        2018/06/12  14:48 <DIR> env
+        2018/06/12  14:48 <DIR> venv
 
 仮想環境モードになる
 
     MacOSの場合
         $ source env/bin/activate
-        (env) $
+        (venv) $
     Windowsの場合
         c:¥> env¥Scripts¥activate.bat
-        (env) c:¥>
+        (venv) c:¥>
 
 仮想環境から抜けたい場合
 
@@ -64,21 +64,31 @@ $ python -m venv <仮想環境の名前(例)env)>
 ## Djangoのインストール
 
     インストール済みパッケージを確認
-    (env) $ pip freeze
+    (venv) $ pip freeze  (インストール済みのパッケージを必要とされるフォーマットで出力)
+　　 全てを表示する
+    (venv) $ pip list    (インストール済みの全てのパッケージリストの表示)
 
     パッケージソフトウェアpipをアップグレード
-    (env) $ pip install --upgrade pip
+    (venv) $ pip install --upgrade pip
+
+    バージョン確認
+    $ pip -V
+    
+    エラーが出たら"--force-reinstall" オプションをつけて再度アップグレード
+    (venv) $ pip install --force-reinstall --upgrade pip
+    または
+    (venv) $ python -m pip install --force-reinstall --upgrade pip
 
     Djangoインストール
-    (env) $ pip install django
+    (venv) $ pip install django
     または
-    (env) $ pip install django==2.0.6　<= バージョン指定
+    (venv) $ pip install django==2.0.6　<= バージョン指定
 
     インストール済みパッケージを確認
-    (env) $ pip freeze
+    (venv) $ pip freeze
     Django==2.0.6
     pytz==2018.4
 
     Djangoのバージョン確認
-    (env) $ python -m django --version
+    (venv) $ python -m django --version
     2.0.6
