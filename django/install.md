@@ -92,3 +92,17 @@ $ python -m venv <仮想環境の名前(例)env)>
     Djangoのバージョン確認
     (env) $ python -m django --version
     2.0.6
+
+## Windowsの場合のCコンパイラのインストール
+
+* [python japan - Windows 環境のPython](https://www.python.jp/install/windows/index.html)
+
+pip installで、Pythonのパッケージをインストールする時に、Cコンパイラが必要となる場合がある。  
+WIndowsは標準でCコンパイラーがないので、別途インストールする。
+
+Cコンパイラーは、Microsoft社製のBuild Toolsをインストールする。
+
+1. ダウンロードサイト：https://visualstudio.microsoft.com/ja/downloads/
+2. 「Tools for Visual Studio 2017」の「Build Tools for Visual Studio 2017」 をダウンロード
+3. インストーラを実行
+4. 「Visual C++ Build Tools 2017」をチェックして インストール ボタンをクリック
