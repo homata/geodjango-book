@@ -45,16 +45,16 @@ $ python -m venv <仮想環境の名前(例)env)>
         env/
     Windowsの場合
         c:¥> dir
-        2018/06/12  14:48 <DIR> venv
+        2018/06/12  14:48 <DIR> env
 
 仮想環境モードになる
 
     MacOSの場合
         $ source env/bin/activate
-        (venv) $
+        (env) $
     Windowsの場合
         c:¥> env¥Scripts¥activate.bat
-        (venv) c:¥>
+        (env) c:¥>
 
 仮想環境から抜けたい場合
 
@@ -64,31 +64,31 @@ $ python -m venv <仮想環境の名前(例)env)>
 ## Djangoのインストール
 
     インストール済みパッケージを確認
-    (venv) $ pip freeze  (インストール済みのパッケージを必要とされるフォーマットで出力)
+    (env) $ pip freeze  (インストール済みのパッケージを必要とされるフォーマットで出力)
 　　 全てを表示する
-    (venv) $ pip list    (インストール済みの全てのパッケージリストの表示)
+    (env) $ pip list    (インストール済みの全てのパッケージリストの表示)
 
     パッケージソフトウェアpipをアップグレード
-    (venv) $ pip install --upgrade pip
+    (env) $ pip install --upgrade pip
 
     バージョン確認
     $ pip -V
     
     エラーが出たら"--force-reinstall" オプションをつけて再度アップグレード
-    (venv) $ pip install --force-reinstall --upgrade pip
+    (env) $ pip install --force-reinstall --upgrade pip
     または
-    (venv) $ python -m pip install --force-reinstall --upgrade pip
+    (env) $ python -m pip install --force-reinstall --upgrade pip
 
     Djangoインストール
-    (venv) $ pip install django
+    (env) $ pip install django
     または
-    (venv) $ pip install django==2.0.6　<= バージョン指定
+    (env) $ pip install django==2.0.6　<= バージョン指定
 
     インストール済みパッケージを確認
-    (venv) $ pip freeze
+    (env) $ pip freeze
     Django==2.0.6
     pytz==2018.4
 
     Djangoのバージョン確認
-    (venv) $ python -m django --version
+    (env) $ python -m django --version
     2.0.6
