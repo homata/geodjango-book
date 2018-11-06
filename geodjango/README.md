@@ -1,9 +1,9 @@
 # GeoDjangoの概要
 
 ## GeoDjangoとは
-GeoDjangoはDjangoに含まれている地理空間データ用のモジュールです。
+GeoDjangoはDjangoに標準で含まれている地理空間データ用のモジュールです。
 
-GeoDjangoでは地理情報システム (GIS) のWebアプリケーションが作成が可能になります。
+GeoDjangoモジュールを使うことで地理情報システム (GIS) のWebアプリケーションの作成が可能になります。
 
 <u>**GeoDjangoの機能**</u>
 * Modelに地理空間情報フィールド を追加 (GeometryField, PointField ...)
@@ -18,7 +18,7 @@ GeoDjangoでは地理情報システム (GIS) のWebアプリケーションが�
     <img src="images/000.png" width=60% style="border:1px #000 solid;">
 </div>
 
-## GeoDjangoの利用想定
+## GeoDjangoの利用例
 * インタラクティブにバックエンドで計算してからフロントサイドへ送信
 * アクセスユーザーの制限と管理
 * Pythonベースのデータ分析や機械学習等との連携または融合
@@ -33,7 +33,7 @@ GeoDjangoでは地理情報システム (GIS) のWebアプリケーションが�
 
 ## GeoDjangoのポイント
 
-### Geospatial libraries and Spatial database
+### 必要な周辺ツール (Geospatial libraries and Spatial database)
 * GDAL, GEOS, PROJ4をインストール
 * PostgresSQL, PostGIS / MySQL / Oracle / SQLite, SpatialLiteのどれかをインストール
 
@@ -45,7 +45,7 @@ GeoDjangoでは地理情報システム (GIS) のWebアプリケーションが�
 * https://docs.djangoproject.com/en/2.0/ref/contrib/gis/install/#spatial-database
 </div>
 
-### GeoDjango Setting Up (setting)
+### 設定 (GeoDjango Setting Up (setting))
 
 設定ファイルにGISデータベースエンジンとアプリケーションを設定
 
@@ -55,8 +55,10 @@ $ vi <プロジェクト>/settings.py
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',  <-- エンジン設定
-        ‘NAME’: ‘データベース名',
-        ‘USER‘: ’ユーザ名',
+        'NAME': 'geodjangodb',  <-- 変更  データベース名
+        'USER': 'postgres',     <-- 追加  ユーサ名
+        'HOST':'localhost',     <-- 追加  ホスト名
+        'PASSWORD': 'xxxxxxxx', <-- 追加  パスワード
             :
     },
 }
@@ -67,7 +69,7 @@ INSTALLED_APPS = [
 ]
 ```
 
-### GeoDjango Setting Up (model)
+### データベース定義(モデル)　(GeoDjango Setting Up (model))
 
 ```python
 $ vi <アプリケーション>/models.py
@@ -86,7 +88,7 @@ class Border(models.Model):
     geom     = models.PolygonField(srid=6668)
 ```
 
-### Importing Spatial Data
+### データのインポート (Importing Spatial Data)
 
 <div align="center" style="margin-bottom:50px;margin-top:30px">
     <img src="images/101.png" width=90% style="border:1px #000 solid;">
@@ -96,7 +98,7 @@ class Border(models.Model):
 * 国土数値情報ダウンロードサービス: http://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-v2_3.html
 </div>
 
-### Importing Spatial Data (ogrinspect)
+### シェープファイルからモデル定義のコードを生成 (Importing Spatial Data (ogrinspect))
 シェープファイルからのモデル作成  
     
 ```python
@@ -115,7 +117,7 @@ class Border(models.Model):
     geom = models.PolygonField(srid=6668)
 ```
 
-### Importing Spatial Data (LayerMapping)
+### データインポート用のスクリプロプログラムを作成 (Importing Spatial Data (LayerMapping))
 シェープファイルをプログラムでデータベースにロードpythonプログラムを編集する
 
 * border_mapping
@@ -153,7 +155,7 @@ def run(verbose=True):
     lm.save(strict=True, verbose=verbose)
 ```
 
-### Importing Spatial Data (実行)
+### インポート実行 (Importing Spatial Data)
 
 load.pyを実行してデータベースにロードする
 
@@ -163,7 +165,7 @@ load.pyを実行してデータベースにロードする
     In [3]: exit
 
 
-### Geographic Admin
+### 管理画面 (Geographic Admin)
 
 $ vi <アプリケーション>/admin.py
 
@@ -202,6 +204,8 @@ result  = json.loads(encjson)
 ```
 
 ### GeoDjangoアプリの作成基本例
+
+#### leaflet.js
 <div align="center" style="margin-bottom:50px;margin-top:30px">
     <img src="images/103.png" width=80% style="border:1px #000 solid;">
 </div>

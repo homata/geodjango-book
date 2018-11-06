@@ -54,8 +54,8 @@ OSGeo4Wインストーラを <https://trac.osgeo.org/osgeo4w/wiki/OSGeo4W_jp> �
 
 #### 環境変数設定
 
-GeoDjangoを使用するには、OSGeo4WのディレクトリをWindowsシステムのPathに追加し、GDAL_DATAとPROJ_LIB環境変数を作成する必要があります。 
-コマンドプロンプトを実行して下記を設定します。
+GeoDjangoを使用するには、OSGeo4Wディレクトリの情報をWindowsシステム環境変数に追加する必要があります。 
+コマンドプロンプトを新規に起動したときには下記のコマンドを実行して設定を追加します。
 
 ```shell
 set POSTGRES_ROOT=C:\Program Files\PostgreSQL\9.6\bin
@@ -66,10 +66,20 @@ set PROJ_LIB=%OSGEO4W_ROOT%\share\proj
 set PATH=%OSGEO4W_ROOT%\bin;%POSTGRES_ROOT%;%PATH%;
 ```
 
+QGIS2
+```shell
+set POSTGRES_ROOT=C:\Program Files\PostgreSQL\9.6\bin
+set OSGEO4W_ROOT=C:\QGIS2
+set GDAL_LIBRARY_PATH=C:\QGIS2\bin
+set GDAL_DATA=%OSGEO4W_ROOT%\share\gdal
+set PROJ_LIB=%OSGEO4W_ROOT%\share\proj
+set PATH=%OSGEO4W_ROOT%\bin;%POSTGRES_ROOT%;%PATH%;
+```
+
 <u>**Note**</u>
 * コマンドプロンプトのウィンドウを閉じると設定が無効になるます。
 * コマンドプロンプトを起動するたびに設定する必要がありますので、batファイルを作成しておくことをお勧めします。
-* 毎回設定するのが大変な場合は、システムの環境変数に設定をすると良いです
+* 毎回設定するのが大変な場合は、システムの環境変数に直接設定をするとことも出来ます。
 
 batファイルの例
 ```shell
@@ -88,7 +98,8 @@ set PATH=%OSGEO4W_ROOT%\bin;%POSTGRES_ROOT%;%PATH%;
 * GeoDjango on Windows: Try setting GDAL_LIBRARY_PATH in your settings
     - https://stackoverflow.com/questions/44140241/geodjango-on-windows-try-setting-gdal-library-path-in-your-settings
 
-OSGeo4Wインストーラでgdalライブラリをインストールすると、Pythonのsqlite3.dllと同名のファイルがインストールされてエラーが発生する場合があります。
+Windowsの場合、OSGeo4Wインストーラでgdalライブラリをインストールするとsqlite3.dllがインストールされます。
+Pythonでもsqlite3.dllがインストールされるので、同名ファイルで衝突発生してエラーが発生する場合があります。
 エラーになったら、Python側のenv¥Scripts¥sqlite3.dllの名前を変更して重複を避けてください
 
 ```shell

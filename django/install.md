@@ -12,7 +12,7 @@ PythonとDjangoは下記のバージョンで説明をします。
 </div>
 
 <u>**Note**</u>
-* ソースコードを編集するにはエディターを利用します。資料ではエディターは「vi」としています記述をしています。適宜、お使いの環境のエディターに置き換えてください。
+* ソースコードを編集するにはエディターを利用します。資料ではエディターは「vi」として記述しています。適宜、お使いの環境のエディターに置き換えてください。
 * エディターがインストールされていない場合は、Visual Studio Code <https://www.microsoft.com/ja-jp/dev/products/code-vs.aspx> 等をインストールしてください。
 * 統合環境で開発する場合は、JetBrain社の PyCharm Community - https://www.jetbrains.com/pycharm/download/ であれば無料で利用することが出来ます。
 
@@ -70,6 +70,9 @@ $ python -m venv <仮想環境の名前(例)env)>
 
     パッケージソフトウェアpipをアップグレード
     (env) $ pip install --upgrade pip
+    
+    Windows 
+    (env) c:¥ python -m pip install --upgrade pip
 
     バージョン確認
     $ pip -V
@@ -97,8 +100,8 @@ $ python -m venv <仮想環境の名前(例)env)>
 
 * [python japan - Windows 環境のPython](https://www.python.jp/install/windows/index.html)
 
-pip installで、Pythonのパッケージをインストールする時に、Cコンパイラが必要となる場合がある。  
-WIndowsは標準でCコンパイラーがないので、別途インストールする。
+pip installで、Pythonのパッケージをインストールする時に、Cコンパイラが必要となる場合があります。  
+WIndowsは標準でCコンパイラーがないので、別途インストールしてください。
 
 Cコンパイラーは、Microsoft社製のBuild Toolsをインストールする。
 

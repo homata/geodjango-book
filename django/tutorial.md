@@ -5,7 +5,7 @@
 Djangoでは「プロジェクト」と「アプリケーション」という要素がります。
 
 * プロジェクト
-    - DjangoのWebアプリ全体を指します。
+    - DjangoのWebアプリ全体をさします。
 * アプリケーション
     - 機能や要素単位でまとめたものでプロジェクトは複数のアプリケーションを持ちます。
 
@@ -20,12 +20,12 @@ Djangoでは「プロジェクト」と「アプリケーション」という�
 
 Djangoでは、アプリケーションごとに開発を進めていきます。
 
-また、アプリケーションは疎結合（Loose coupling）という考えでアプリケーション間の依存は極力減らして開発をします。
+また、アプリケーションは疎結合（Loose coupling）という考えでアプリケーション間の依存は極力減らして開発をすることが推奨されてます。
 
 ## プロジェクト構成
 
 プロジェクトの作成は下記のコマンドで作成をします。
-これがWebアプリのルートとなります。
+これがWebアプリのルートディレクトリとなります。
 
 プロジェクト作成コマンド<br>
 $ django-admin startproject <プロジェクト名> [<ディレクトリ>]
@@ -76,13 +76,13 @@ Webアプリの「言語」と「タイムゾーン」を自分の地域に設�
 
 <u>**Note:**</u> 
 
-* タイムゾーンは、ウィキペディアのList of tz database time zones - <http://en.wikipedia.org/wiki/List_of_tz_database_time_zones>が参考になります。
+* タイムゾーンは、ウィキペディアの「List of tz database time zones - <http://en.wikipedia.org/wiki/List_of_tz_database_time_zones>」が参考になります。
 
 
 ## データベースの設定
 
 この現時点では、デフォルトのSQLiteデータベースで動作確認をします。
-ENGINEの項目を変更することで、PostgreSQLやMySQLなどに変更することが出来ます。
+ENGINEの項目を変更することで、PostgreSQLやMySQLなどに他のデータベースに変更することが出来ます。
 
 MacOSの場合で、SQLiteがインストールされて無い場合はbrewコマンドでイントールしてください。
 
