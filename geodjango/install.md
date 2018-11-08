@@ -57,23 +57,24 @@ OSGeo4Wインストーラを <https://trac.osgeo.org/osgeo4w/wiki/OSGeo4W_jp> �
 GeoDjangoを使用するには、OSGeo4Wディレクトリの情報をWindowsシステム環境変数に追加する必要があります。 
 コマンドプロンプトを新規に起動したときには下記のコマンドを実行して設定を追加します。
 
+C:¥OSGeo4W64の場合
 ```shell
-set POSTGRES_ROOT=C:\Program Files\PostgreSQL\9.6\bin
-set OSGEO4W_ROOT=C:\OSGeo4W64
-set GDAL_LIBRARY_PATH=C:\OSGeo4W64\bin
-set GDAL_DATA=%OSGEO4W_ROOT%\share\gdal
-set PROJ_LIB=%OSGEO4W_ROOT%\share\proj
-set PATH=%OSGEO4W_ROOT%\bin;%POSTGRES_ROOT%;%PATH%;
+set POSTGRES_ROOT=C:¥Program Files¥PostgreSQL¥9.6¥bin
+set OSGEO4W_ROOT=C:¥OSGeo4W64
+set GDAL_LIBRARY_PATH=C:¥OSGeo4W64¥bin
+set GDAL_DATA=%OSGEO4W_ROOT%¥share¥gdal
+set PROJ_LIB=%OSGEO4W_ROOT%¥share¥proj
+set PATH=%OSGEO4W_ROOT%¥bin;%POSTGRES_ROOT%;%PATH%;
 ```
 
-QGIS2
+C:¥QGIS2の場合
 ```shell
-set POSTGRES_ROOT=C:\Program Files\PostgreSQL\9.6\bin
-set OSGEO4W_ROOT=C:\QGIS2
-set GDAL_LIBRARY_PATH=C:\QGIS2\bin
-set GDAL_DATA=%OSGEO4W_ROOT%\share\gdal
-set PROJ_LIB=%OSGEO4W_ROOT%\share\proj
-set PATH=%OSGEO4W_ROOT%\bin;%POSTGRES_ROOT%;%PATH%;
+set POSTGRES_ROOT=C:¥Program Files¥PostgreSQL¥9.6¥bin
+set OSGEO4W_ROOT=C:¥QGIS2
+set GDAL_LIBRARY_PATH=C:¥QGIS2¥bin
+set GDAL_DATA=%OSGEO4W_ROOT%¥share¥gdal
+set PROJ_LIB=%OSGEO4W_ROOT%¥share¥proj
+set PATH=%OSGEO4W_ROOT%¥bin;%POSTGRES_ROOT%;%PATH%;
 ```
 
 <u>**Note**</u>
@@ -83,15 +84,17 @@ set PATH=%OSGEO4W_ROOT%\bin;%POSTGRES_ROOT%;%PATH%;
 
 batファイルの例
 ```shell
-$ vi env.bat
+$ vi genv.bat
 @echo off
-set POSTGRES_ROOT=C:\Program Files\PostgreSQL\9.6\bin
-set OSGEO4W_ROOT=C:\OSGeo4W64
-set GDAL_LIBRARY_PATH=C:\OSGeo4W64\bin
-set GDAL_DATA=%OSGEO4W_ROOT%\share\gdal
-set PROJ_LIB=%OSGEO4W_ROOT%\share\proj
-set PATH=%OSGEO4W_ROOT%\bin;%POSTGRES_ROOT%;%PATH%;
+set POSTGRES_ROOT=C:¥Program Files¥PostgreSQL¥9.6¥bin
+set OSGEO4W_ROOT=C:¥OSGeo4W64
+set GDAL_LIBRARY_PATH=C:¥OSGeo4W64¥bin
+set GDAL_DATA=%OSGEO4W_ROOT%¥share¥gdal
+set PROJ_LIB=%OSGEO4W_ROOT%¥share¥proj
+set PATH=%OSGEO4W_ROOT%¥bin;%POSTGRES_ROOT%;%PATH%;
 ```
+
+* [ダウンロード: 環境設定ファイル (genv.bat)](https://github.com/homata/geodjango-book/blob/masterdownload/genv.bat)
 
 #### sqlite3.dllのコンフリクト
 
@@ -191,17 +194,17 @@ $ python manage.py startapp <アプリケーション名>
 ## psycopg2をインストール
 
 psycopg2 Pythonモジュールは、PythonとPostgreSQLデータベース間のインタフェースライブラリです。
-下記のどちらかをインストールします。
+下記のバイナリーバージョンをインストールします。
 
-コンパイルバージョン
-```python
-(env) $ pip install psycopg2
-```
-
-バイナリーバージョン
+バイナリーバージョンの場合
 ```python
 (env) $ pip install psycopg2-binary
     -> psycopg2-binary==2.7.4
+```
+
+コンパイルバージョンの場合
+```python
+(env) $ pip install psycopg2
 ```
 
 ## データベースとアプリケーションの設定

@@ -49,3 +49,9 @@ GeoDjangoはDjangoに含まれている地理空間データ用のモジュー�
     - <http://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P02-v4_0.html>
 * 国土交通省国土政策局「国土数値情報（バス停留所データ）」 (P11-10_01_GML)
     - <http://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P11.html>
+
+# サンプルコード ダウンロード
+
+* [サンプルソースコード (source_code.zip)](https://github.com/homata/geodjango-book/blob/master/download/source_code.zip)
+* GitHub
+    - <https://github.com/homata/geodjango-hands-on>

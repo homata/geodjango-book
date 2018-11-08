@@ -20,7 +20,8 @@ Pythonで作成されたWebアプリケーションを作成するフレーム�
 ### 参考リンク (日本語サイト)
 * モダンDjango入門 - https://codezine.jp/article/corner/723
 * PaizaCloud - https://paiza.cloud/ja/
-* 「現場で使える 基礎Django」を読みました #技術書典 - http://thinkami.hatenablog.com/entry/2018/04/25/081142
+* 現場で使える Django の教科書《基礎編》- http://thinkami.hatenablog.com/entry/2018/04/25/081142
+* 現場で使える Django の教科書《実践編》- http://akiyoko.hatenablog.jp/entry/2018/10/03/105511
 * 侍エンジニア塾が運営するプログラミング入門者向け学習情報サイト - https://www.sejuku.net/blog/category/django
 * akiyoko blog - http://akiyoko.hatenablog.jp/archive/category/Django
 * 偏った言語信者の垂れ流し - https://tokibito.hatenablog.com/
@@ -35,6 +36,8 @@ Pythonで作成されたWebアプリケーションを作成するフレーム�
 ### 書籍 (日本語)
 * 基礎から学ぶ Django - https://www.amazon.co.jp/dp/486354247X/
 * 現場で使える 基礎 Django - https://booth.pm/ja/items/823251
+    * Amazon (ペーパーバック) 現場で使える Django の教科書《基礎編》- https://www.amazon.co.jp/dp/4802094744/
+    * Amazon (Kindle版) 現場で使える Django の教科書《基礎編》- https://www.amazon.co.jp/dp/B07GK7BWB7/
 * Python Django 超入門 - https://www.amazon.co.jp/dp/4798054488
 
 ### 書籍 (洋書)

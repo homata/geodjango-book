@@ -18,12 +18,16 @@
 <u>**利用約款**</u>
 国土数値情報利用約款 - http://nlftp.mlit.go.jp/ksj/other/yakkan.html
 
-#### GeoJSONに変換をしたファイル
+#### GeoJSONに変換をしたファイルの大きさ
 
-* 国土数値情報　行政区域データ ([hokkaido.geojson (63.4MB)](data/hokkaido.geojson))
-* 国土数値情報　小学校区データ ([elementary_school.geojson (196KB)](data/elementary_school.geojson))
-* 国土数値情報　公共施設データ ([public_facility.geojson (3.3MB)](data/public_facility.geojson))
-* 国土数値情報　バス停留所データ ([busstop.geojson (13.9MB)](data/busstop.geojson))
+* 国土数値情報　行政区域データ (hokkaido.geojson (63.4MB)
+* 国土数値情報　小学校区データ (elementary_school.geojson (196KB))
+* 国土数値情報　公共施設データ (public_facility.geojson (3.3MB))
+* 国土数値情報　バス停留所データ (busstop.geojson (13.9MB))
+
+##### 一括データダウンロード
+* [国土数値情報データ ダウンロード (Shapefile)](https://github.com/homata/geodjango-book/blob/masterdownload/shapefile.zip)
+* [国土数値情報データ ダウンロード (geojson)](https://github.com/homata/geodjango-book/blob/masterdownload/geojson.zip)
 
 ## GeoJSONデータのモデル構造を調べる
 
