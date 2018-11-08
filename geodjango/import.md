@@ -26,8 +26,8 @@
 * 国土数値情報　バス停留所データ (busstop.geojson (13.9MB))
 
 ##### 一括データダウンロード
-* [国土数値情報データ ダウンロード (Shapefile)](https://github.com/homata/geodjango-book/raw/master/download/shapefile.zip)
-* [国土数値情報データ ダウンロード (geojson)](https://github.com/homata/geodjango-book/raw/master/download/geojson.zip)
+* [国土数値情報データ ダウンロード (Shapefileファイル)](https://github.com/homata/geodjango-book/raw/master/download/shapefile.zip)
+* [国土数値情報データ ダウンロード (GeoJSONファイル)](https://github.com/homata/geodjango-book/raw/master/download/geojson.zip)
 
 ## GeoJSONデータのモデル構造を調べる
 
