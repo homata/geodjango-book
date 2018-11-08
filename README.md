@@ -52,6 +52,6 @@ GeoDjangoはDjangoに含まれている地理空間データ用のモジュー�
 
 # サンプルコード ダウンロード
 
-* [サンプルソースコード (source_code.zip)](https://github.com/homata/geodjango-book/blob/master/download/source_code.zip)
+* [サンプルソースコード (source_code.zip)](https://github.com/homata/geodjango-book/raw/master/download/source_code.zip)
 * GitHub
     - <https://github.com/homata/geodjango-hands-on>
