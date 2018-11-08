@@ -94,7 +94,7 @@ set PROJ_LIB=%OSGEO4W_ROOT%¥share¥proj
 set PATH=%OSGEO4W_ROOT%¥bin;%POSTGRES_ROOT%;%PATH%;
 ```
 
-* [ダウンロード: 環境設定ファイル (genv.bat)](https://github.com/homata/geodjango-book/blob/masterdownload/genv.bat)
+* [ダウンロード: 環境設定ファイル (genv.bat)](https://github.com/homata/geodjango-book/raw/master/download/genv.bat)
 
 #### sqlite3.dllのコンフリクト
 
