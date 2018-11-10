@@ -81,6 +81,7 @@ set PATH=%OSGEO4W_ROOT%¥bin;%POSTGRES_ROOT%;%PATH%;
 * コマンドプロンプトのウィンドウを閉じると設定が無効になるます。
 * コマンドプロンプトを起動するたびに設定する必要がありますので、batファイルを作成しておくことをお勧めします。
 * 毎回設定するのが大変な場合は、システムの環境変数に直接設定をするとことも出来ます。
+* 
 
 batファイルの例
 ```shell
@@ -117,6 +118,39 @@ C:\Users\xxxx\Documents\geodjango\env\Scripts のディレクトリ
             0 個のディレクトリ  89,404,837,888 バイトの空き領域
 ```
 
+#### OSGeo4WやQGIS2のPython2とのコンフリクト
+
+OSGeo4W ShellやQGIS2の環境変数を設定した場合、OSGeo4WやQGISでインストールされているpythonが2系の為に、python.exeがコンフリクトする場合があります。
+
+確認方法
+
+    C:¥> where python
+    C:¥QGIS2¥bin¥python.exe
+    C:¥Python36¥python.exe
+
+バージョン確認
+
+    C:¥> python -V
+    Python 2.1.17
+
+    C:¥> dir C:¥QGIS2¥bin¥python*.*
+         :
+        2017/09/17 03:27  python.exe
+        2017/09/17 03:27  python27.dll
+        :
+
+その場合には利用するPython3を有効にするために、パスの優先順位を変更するか、python3.exeファイルを利用する。
+
+<u>**優先順位の変更例**</u>
+
+python3のあるディレクトリーをPATHの一番最初に設定し、仮想環境のパッケージのディレクトリをPYTHONPATHに設定する
+
+    set PATH=<仮想環境実行ディレクトリ>¥env¥bin;%PATH%;
+    set PYTHONPATH=<仮想環境実行ディレクトリ>¥env¥lib¥python3.6¥site-packages
+
+    例）
+    set PATH=C:¥Users¥xxxx¥Documents¥geodjango¥env¥bin;%PATH%;
+    set PYTHONPATH=C:¥Users¥xxxx¥Documents¥geodjango¥env¥lib¥python3.6¥site-packages
 
 ## PostGISのデータベースを作成
 

@@ -38,6 +38,9 @@ ogrinspectコマンドはデータファイルを解析して、モデルで定�
 ogrinspectコマンド<br>
 $ python manage.py ogrinspect <データファイル> <モデル名>
 
+<u>**注意**</u>
+* ogrinspectでGeoJSONデータを調べた場合には”models.CharField(max_length=0)”のようにmax_lengthが**0**になります。Modelに記述する場合にはmax_lenghに最大値の長さを設定してください。((例)max_length=100)
+
 行政区域データ
 ```python
 (env) $ python manage.py ogrinspect --srid=4326 hokkaido.geojson Border
@@ -590,7 +593,7 @@ class BorderAdmin(LeafletGeoAdmin):
   search_fields = ['n03_001','n03_003','n03_004']
   list_filter = ('n03_003')
 
-admin.site.register(Border, BorderAdmin)
+admin.site.register(Border, LeafletGeoAdmin)
 admin.site.register(School, LeafletGeoAdmin)
 admin.site.register(Facility, LeafletGeoAdmin)
 admin.site.register(Busstop, LeafletGeoAdmin)
@@ -617,6 +620,17 @@ from django.contrib.gis import admin
 admin.site.site_title  = 'GeoDjangoログイン'
 admin.site.site_header = 'GeoDjangoハンズオン'
 admin.site.index_title = 'GeoDjangoメニュー'
+```
+
+または
+
+```python
+(env) $ vi geodjango/settings.py
+from django.contrib import admin
+
+admin.AdminSite.site_title  = 'GeoDjangoログイン'
+admin.AdminSite.site_header = 'GeoDjangoハンズオン'
+admin.AdminSite.index_title = 'GeoDjangoメニュー'
 ```
 
 worldアプリケーションのモデル定義のクラスにメタクラスを追加すると、管理画面のテーブル名称を見やすい形に変更することが出来ます。
