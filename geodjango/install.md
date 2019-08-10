@@ -52,29 +52,28 @@ OSGeo4Wインストーラを <https://trac.osgeo.org/osgeo4w/wiki/OSGeo4W_jp> �
 </div>
 
 
-#### 環境変数設定
+#### 環境変数設定 (Windowsの場合)
 
 GeoDjangoを使用するには、OSGeo4Wディレクトリの情報をWindowsシステム環境変数に追加する必要があります。 
 コマンドプロンプトを新規に起動したときには下記のコマンドを実行して設定を追加します。
 
 C:¥OSGeo4W64の場合
 ```shell
-set POSTGRES_ROOT=C:¥Program Files¥PostgreSQL¥9.6¥bin
+set POSTGRES_ROOT=C:¥Program Files¥PostgreSQL¥9.6
 set OSGEO4W_ROOT=C:¥OSGeo4W64
 set GDAL_LIBRARY_PATH=C:¥OSGeo4W64¥bin
 set GDAL_DATA=%OSGEO4W_ROOT%¥share¥gdal
 set PROJ_LIB=%OSGEO4W_ROOT%¥share¥proj
-set PATH=%OSGEO4W_ROOT%¥bin;%POSTGRES_ROOT%;%PATH%;
+set PATH=%OSGEO4W_ROOT%¥bin;%POSTGRES_ROOT%¥bin;%PATH%;
 ```
 
 C:¥QGIS2の場合
 ```shell
-set POSTGRES_ROOT=C:¥Program Files¥PostgreSQL¥9.6¥bin
-set OSGEO4W_ROOT=C:¥QGIS2
+set POSTGRES_ROOT=C:¥Program Files¥PostgreSQL¥9.6
 set GDAL_LIBRARY_PATH=C:¥QGIS2¥bin
 set GDAL_DATA=%OSGEO4W_ROOT%¥share¥gdal
 set PROJ_LIB=%OSGEO4W_ROOT%¥share¥proj
-set PATH=%OSGEO4W_ROOT%¥bin;%POSTGRES_ROOT%;%PATH%;
+set PATH=%OSGEO4W_ROOT%¥bin;%POSTGRES_ROOT%¥bin;%PATH%;
 ```
 
 <u>**Note**</u>
@@ -86,21 +85,77 @@ set PATH=%OSGEO4W_ROOT%¥bin;%POSTGRES_ROOT%;%PATH%;
 batファイルの例
 ```shell
 $ vi genv.bat
+
 @echo off
-set POSTGRES_ROOT=C:¥Program Files¥PostgreSQL¥9.6¥bin
+set POSTGRES_ROOT=C:\Program Files\PostgreSQL\9.6
 set OSGEO4W_ROOT=C:¥OSGeo4W64
 set GDAL_LIBRARY_PATH=C:¥OSGeo4W64¥bin
 set GDAL_DATA=%OSGEO4W_ROOT%¥share¥gdal
 set PROJ_LIB=%OSGEO4W_ROOT%¥share¥proj
-set PATH=%OSGEO4W_ROOT%¥bin;%POSTGRES_ROOT%;%PATH%;
+set PATH=%OSGEO4W_ROOT%¥bin;%POSTGRES_ROOT%¥bin;%PATH%;
 ```
 
 * [ダウンロード: 環境設定ファイル (genv.bat)](https://github.com/homata/geodjango-book/raw/master/download/genv.bat)
 
+settings.pyの例
+```shell
+$ vi プロジェクト名>\settings.py
+
+import os
+if os.name == 'nt':
+    import platform
+    POSTGRES = r"C:\Program Files\PostgreSQL\9.6"
+    OSGEO4W = r"C:\OSGeo4W"
+    if '64' in platform.architecture()[0]:
+        OSGEO4W += "64"
+    assert os.path.isdir(OSGEO4W), "Directory does not exist: " + OSGEO4W
+
+    os.environ['OSGEO4W_ROOT'] = OSGEO4W
+    os.environ['POSTGRES_ROOT'] = POSTGRES
+    os.environ['GDAL_LIBRARY_PATH'] = OSGEO4W + r"\bin"
+    os.environ['GEOS_LIBRARY_PATH'] = OSGEO4W + r"\bin"
+    os.environ['GDAL_DATA'] = OSGEO4W + r"\share\gdal"
+    os.environ['PROJ_LIB'] = OSGEO4W + r"\share\proj"
+    os.environ['PATH'] = OSGEO4W + r"\bin;" + POSTGRES + r"\bin;" + os.environ['PATH']
+```
+
+* [GeoDjango on Windows: “Could not find the GDAL library” / “OSError: [WinError 126] The specified module could not be found](https://stackoverflow.com/questions/49139044/geodjango-on-windows-could-not-find-the-gdal-library-oserror-winerror-12/49159195#49159195)
+
+-----
+
+#### 環境設定のエラー対策 (Windowsの場合)
+#### GDAL not installed (gdalxxx.dllが見つからない) エラー
+
+GDALのライブラリが見つからない
+
+```
+    django.core.exceptions.ImproperlyConfigured: Could not find the GDAL library (tried "gdal202", "gdal201", "gdal20", "gdal111", "gdal110", "gdal19"). Is GDAL installed? If it is, try setting GDAL_LIBRARY_PATH in your settings.
+```
+
+GDALのライブラリが更新されている場合にエラーになることがあります。GDAL_LIBRARY_PATHのパスに"gdalxxx.dll"があるか確認をしてください。  
+GDALのライブラリが"gdal204.dll"に更新されていて、かつDjangoのバージョンが古い場合にはDjangoのソースにパッチをあててください。
+このパッチはDjangoの最新版では既に対応済みですので、古いDjangoを使う場合のときだけに必要です。
+
+ソースパッチは、Djangoのソースコードに「gdal204」を追加します。
+
+「gdal204」追加する例
+```
+    $ vi %PYTHON_ROOT%\Lib\site-packages\django\contrib\gis\gdal\libgdal.py
+
+    elif os.name == 'nt':
+        # Windows NT shared libraries
+        lib_names = ['gdal204', 'gdal202', 'gdal201', 'gdal20', 'gdal111', 'gdal110', 'gdal19']
+```
+
+パッチをあてない場合は、GDALのバージョンを下げる必要があります。
+
+* [GeoDjango on Windows: “Could not find the GDAL library” / “OSError: [WinError 126] The specified module could not be found](https://stackoverflow.com/questions/49139044/geodjango-on-windows-could-not-find-the-gdal-library-oserror-winerror-12/49159195#49159195)
+* [GISInternals Support Site](http://www.gisinternals.com/index.html)
+* [Unofficial Windows Binaries for Python Extension Packages](https://www.lfd.uci.edu/~gohlke/pythonlibs/)
+
 #### sqlite3.dllのコンフリクト
 
-* GeoDjango on Windows: Try setting GDAL_LIBRARY_PATH in your settings
-    - https://stackoverflow.com/questions/44140241/geodjango-on-windows-try-setting-gdal-library-path-in-your-settings
+* [GeoDjango on Windows: Try setting GDAL_LIBRARY_PATH in your settings](https://stackoverflow.com/questions/44140241/geodjango-on-windows-try-setting-gdal-library-path-in-your-settings)
 
 Windowsの場合、OSGeo4Wインストーラでgdalライブラリをインストールするとsqlite3.dllがインストールされます。
 Pythonでもsqlite3.dllがインストールされるので、同名ファイルで衝突発生してエラーが発生する場合があります。
@@ -151,6 +206,8 @@ python3のあるディレクトリーをPATHの一番最初に設定し、仮想
     例）
     set PATH=C:¥Users¥xxxx¥Documents¥geodjango¥env¥bin;%PATH%;
     set PYTHONPATH=C:¥Users¥xxxx¥Documents¥geodjango¥env¥lib¥python3.6¥site-packages
+
+---
 
 ## PostGISのデータベースを作成
 
