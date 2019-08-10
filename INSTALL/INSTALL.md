@@ -266,14 +266,14 @@ PostGISがチェックされていることを確認し「Next」ボタンを選
 </div>
 
 デフォルトの設定はそのままで「はい」を選択します。
-環境設定POSTGIS_ENABLE_OUTDB_RASTERSに"1"が設定されます
+環境設定POSTGIS_GDAL_ENABLED_DRIVERSに"GTiff PNG JPEG GIF XYZ DTED USGSDEM AAIGrid"が設定されます
 
 <div align="center" style="margin-bottom:50px;margin-top:30px">
     <img src="images/windows/118.png" width=60% style="border:1px #000 solid;">
 </div>
 
 デフォルトの設定はそのままで「はい」を選択します。
-環境設定POSTGIS_GDAL_ENABLED_DRIVERSに"GTiff PNG JPEG GIF XYZ DTED USGSDEM AAIGrid"が設定されます
+環境設定POSTGIS_ENABLE_OUTDB_RASTERSに"1"が設定されます
 
 <div align="center" style="margin-bottom:50px;margin-top:30px">
     <img src="images/windows/119.png" width=60% style="border:1px #000 solid;">
