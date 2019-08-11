@@ -153,6 +153,12 @@ GDALのライブラリが"gdal204.dll"に更新されていて、かつDjangoの
 * [GISInternals Support Site](http://www.gisinternals.com/index.html)
 * [Unofficial Windows Binaries for Python Extension Packages](https://www.lfd.uci.edu/~gohlke/pythonlibs/)
 
+##### "gdal204.dll"の代わりに"gdal111.dll"を使う場合
+Djangoのソースを編集したくない場合は、"gdal204.dll"の代わりに"gdal111.dll"を使う方法があります。
+QGISをインストールすると、GDALライブラリ**gdalxxxx.dll**がインストールされるのでこれを使用します。
+確認した時点では、[QGIS 3.4.10 LTR](https://www.qgis.org/ja/site/forusers/download.html)をインストールすると"gdal111.dll"がインストールされます。
+
+
 #### sqlite3.dllのコンフリクト
 
 * [GeoDjango on Windows: Try setting GDAL_LIBRARY_PATH in your settings](https://stackoverflow.com/questions/44140241/geodjango-on-windows-try-setting-gdal-library-path-in-your-settings)
