@@ -63,6 +63,9 @@ GeoDjangoはDjangoに含まれている地理空間データ用のモジュー�
 * PostGISとGeoDjangoを使ってLeafletでGeoJSON Tile Layerを表示してみる(1) – インストール編 – - https://blog.bitmeister.jp/?p=3467
 * Django Rest Framework GISで誰でも簡単RESTful Geo API - http://monomoti.hatenablog.jp/entry/2015/12/15/000000
 
+### チュートリアル
+* [ちずのつくりかた / map school](https://mapschool.io/index.ja.html) 
+
 ## Python
 プログラミング言語の一つ。コードの可読性を高めた言語です。
 
