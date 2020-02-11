@@ -1,4 +1,4 @@
-Django==2.0.6
+Django==2.2.10
 django-filter==1.1.0
 django-leaflet==0.24.0
 djangorestframework==3.8.2
