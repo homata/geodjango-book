@@ -3,7 +3,7 @@
 ## GISライブラリインストール (Windowsの場合のみ)
 
 ##### OSGeo4Wインストール
-GeoDjangoが必要とする、GDAL(Geospatial Data Abstraction Library), GEOS (Geometry Engine, Open Source) ,PROJ4 (Cartographic Projections Library) ライブラリをOSGeo4Wインストーラでインストールしまします
+GeoDjangoが必要とする、GDAL(Geospatial Data Abstraction Library), GEOS (Geometry Engine, Open Source) ,PROJ4 (Cartographic Projections Library) ライブラリをOSGeo4Wインストーラでインストールします。
 
 OSGeo4Wインストーラを <https://trac.osgeo.org/osgeo4w/wiki/OSGeo4W_jp> からダウンロードして実行します。 
 
@@ -77,7 +77,7 @@ set PATH=%OSGEO4W_ROOT%¥bin;%POSTGRES_ROOT%¥bin;%PATH%;
 ```
 
 <u>**Note**</u>
-* コマンドプロンプトのウィンドウを閉じると設定が無効になるます。
+* コマンドプロンプトのウィンドウを閉じると設定が無効になります。
 * コマンドプロンプトを起動するたびに設定する必要がありますので、batファイルを作成しておくことをお勧めします。
 * 毎回設定するのが大変な場合は、システムの環境変数に直接設定をするとことも出来ます。
 * 

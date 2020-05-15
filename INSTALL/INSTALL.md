@@ -190,7 +190,7 @@ PostgreSQLインストーラはpostgresデータベースのスーパーユー�
     <img src="images/windows/109a.png" width=60% style="border:1px #000 solid;">
 </div>
 
-Spatial ExtensionsからPostGIS 2.4を選択します
+Spatial ExtensionsからPostGIS 2.3を選択します
 
 <div align="center" style="margin-bottom:50px;margin-top:30px">
     <img src="images/windows/110.png" width=60% style="border:1px #000 solid;">

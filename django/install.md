@@ -5,7 +5,7 @@ PythonとDjangoは下記のバージョンで説明をします。
 * Python 3.6.5
 * Django 2.0.6
 
-コンソール (コマンドプロンプト)を開いて作業をします
+コンソール (コマンドプロンプト)を開いて作業をします。
 
 <div align="center" style="margin-bottom:50px;margin-top:30px">
     <img src="images/002.png" width=60% style="border:1px #000 solid;">
