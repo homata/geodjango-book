@@ -1,4 +1,4 @@
-# Djangonのチュートリアル
+# Djangoのチュートリアル
 
 ## Djangoの構成
 
